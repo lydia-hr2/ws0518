@@ -5,7 +5,6 @@ import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 
-// 멀티스레드 돌아가는 환경설정
 @Configuration
 public class ScheduleConfig implements SchedulingConfigurer
 
