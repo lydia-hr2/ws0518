@@ -13,4 +13,13 @@ public class Clone0511Application {
     }
 
 
+    @Bean
+    public InternalResourceViewResolver setupViewResolver() {
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+        resolver.setPrefix("/views/");
+        resolver.setSuffix(".jsp");
+        return resolver;
+    }
+
+
 }
