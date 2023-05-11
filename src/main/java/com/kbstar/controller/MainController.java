@@ -17,7 +17,13 @@ public class MainController {
 
     @RequestMapping("/shop")
     public String shop(Model model) {
-        return "shop";
+        model.addAttribute("center","shop");
+        return "index";
     }
 
+    @RequestMapping("/contact")
+    public String contact(Model model) {
+        model.addAttribute("center","contact");
+        return "index";
+    }
 }
