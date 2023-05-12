@@ -26,4 +26,12 @@ public class MainController {
         model.addAttribute("center","contact");
         return "index";
     }
+
+    @RequestMapping("/signin")
+    public String signin(Model model) {
+        model.addAttribute("center","signin");
+        return "index";
+    }
+
+
 }

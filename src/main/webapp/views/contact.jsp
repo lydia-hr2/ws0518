@@ -216,6 +216,11 @@
                             <h2>Location</h2>
                         </div>
                         <div id="map"></div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                     </div>
                 </div>
             </div>
