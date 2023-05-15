@@ -4,50 +4,48 @@
 
 <style>
     .medium_img{
-        width : 80px;
+        width:200px;
     }
 </style>
 
 <div class="col-sm-8 text-left">
-    <div class="low content">
-        <div class="col-sm-8 text-left">
-            <h1>CART page</h1>
-
-<%--            total이라는 변수를 선언( 초기값은 0 )--%>
-
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>IMG</th>
-                    <th>ITEM_ID</th>
-                    <th>NAME</th>
-                    <th>PRICE</th>
-                    <th>COUNT</th>
-                    <th>TOTAL</th>
-                    <th>RDATE</th>
-                    <th>DELETE</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="obj" items="${allcart}">
+    <div class="container">
+        <h3>My Cart</h3>
+        <c:set var="total" value="0"/> <%--총계를 구하기 위해 변수 선언--%>
+        <div class = "row content">
+            <div class="col-sm-9 text-left">
+                <table class="table table-hover">
+                    <thead>
                     <tr>
-                        <td><img src="/img/${obj.item_imgname}" class="medium_img"></td>
-                        <td>${obj.item_id}</td>
-                        <td>${obj.item_name}</td>
-                        <td><fmt:formatNumber value="${obj.item_price}" pattern="###,###원"/></td>
-                        <td>${obj.cnt}</td>
-                        <td><fmt:formatNumber value="${obj.cnt * obj.item_price}" pattern="###,###원"/></td>
-                        <td><fmt:formatDate value="${obj.rdate}" pattern="yyyy-MM-dd"/></td>
-                        <td> <a href="/item/delcart?id=${obj.id}" class="btn btn-info" role="button">DELETE</a></td>
-<%--                        카트의 id는 pk는 아니지만 unique함--%>
+                        <th>IMG</th>
+                        <th>ITEM_ID</th>
+                        <th>NAME</th>
+                        <th>Price</th>
+                        <th>Count</th>
+                        <th>Total</th>
+                        <th>RegDate</th>
+                        <th>DELETE</th>
                     </tr>
-                   <c:set var="total" value="${total + (obj.cnt * obj.item_price)}"/>
-<%--                    for문이 돌아가면서 total의 값을 계산--%>
-                </c:forEach>
-                </tbody>
-            </table>
-            <h4>장바구니 총액 : <fmt:formatNumber value="${total}" pattern="###,###원"/></h4>
-<%--            for문 안에서 만든 값을 for 문 밖에서 출력--%>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="obj" items="${allcart}"> <%--clist의 객채 1개씩 c라는 이름으로 끄집어 내겟다--%>
+                        <tr>
+                            <td><img class="medium_img" src="/uimg/${obj.item_imgname}"></td>
+                            <td><a href="/item/get?id=${obj.item_id}">${obj.item_id}</a></td>
+                            <td>${obj.item_name}</td>
+                            <td><fmt:formatNumber value="${obj.item_price}" pattern="###,###원" /></td>
+                            <td>${obj.cnt}</td>
+                            <td><fmt:formatNumber value="${obj.cnt * obj.item_price}" pattern="###,###원" /></td>
+                            <td><fmt:formatDate value="${obj.rdate}" pattern="yyyy-MM-dd" /></td>
+                            <td><a href="/item/delcart?id=${obj.id}" class="btn btn-info" role="button">DELETE</a></td>
+                        </tr>
+                        <c:set var="total" value="${total + (obj.cnt * obj.item_price)}" />
+                    </c:forEach>
+                    </tbody>
+                </table>
+                <h4>장바구니 총계: <fmt:formatNumber value="${total}" pattern="###,###원" /></h4>
+            </div>
         </div>
+
     </div>
 </div>

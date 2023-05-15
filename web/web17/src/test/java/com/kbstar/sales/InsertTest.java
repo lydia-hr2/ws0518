@@ -17,11 +17,12 @@ class InsertTest {
     SalesService service;
     @Test
     void contextLoads() {
-        Date date =  new Date();
-        Sales obj = new Sales("2024-04-27",20000,"M");
+
+        Sales obj = new Sales("1512-05-05",20,"M");
         try {
             service.register(obj);
             log.info("Sales가 등록이 되었다");
+            service.get();
         } catch (Exception e) {
             log.info("등록 에러........................................");
             e.printStackTrace();

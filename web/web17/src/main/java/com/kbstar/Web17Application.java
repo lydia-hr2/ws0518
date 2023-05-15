@@ -11,6 +11,7 @@ public class Web17Application {
     public static void main(String[] args) {
         SpringApplication.run(Web17Application.class, args);
     }
+
     @Bean
     public InternalResourceViewResolver setupViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();

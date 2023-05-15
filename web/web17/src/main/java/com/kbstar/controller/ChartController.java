@@ -7,12 +7,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/chart")
+@RequestMapping("/chart") // /cust를 넣음으으로 기본적으로 주소에 /cust가 셋팅됨
 public class ChartController {
 
     Logger logger = LoggerFactory.getLogger(this.getClass().getSimpleName());
     String dir = "chart/";
-
     @RequestMapping("")
     public String main(Model model){
         model.addAttribute("left",dir+"left");
@@ -40,7 +39,6 @@ public class ChartController {
         model.addAttribute("center",dir+"chart03");
         return "index";
     }
-
 
     @RequestMapping("/chart04")
     public String chart04(Model model){

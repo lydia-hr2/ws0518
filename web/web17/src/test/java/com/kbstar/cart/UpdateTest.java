@@ -18,10 +18,11 @@ class UpdateTest {
     CartService service;
     @Test
     void contextLoads() {
-        Cart obj = new Cart(100, "id01", 100, 5);
+        Cart obj = new Cart(105, "id01", 100, 777);
         try {
             service.modify(obj);
-            log.info("등록정상");
+            log.info("장바구니 변경 완료");
+            service.get(obj.getId());
         } catch (Exception e) {
                 log.info("시스템 장애입니다.==============================");
                 e.printStackTrace();

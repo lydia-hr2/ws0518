@@ -16,7 +16,7 @@ class SelectOneTest {
     void contextLoads() {
 
         try {
-            service.get(100);
+            service.get(105);
         } catch (Exception e) {
             log.info("시스템 장애입니다.==============================");
                 e.printStackTrace();

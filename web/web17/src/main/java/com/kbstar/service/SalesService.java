@@ -1,6 +1,7 @@
 package com.kbstar.service;
 
 import com.kbstar.dto.Sales;
+import com.kbstar.frame.KBService;
 import com.kbstar.mapper.SalesMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -18,7 +18,7 @@ public class UpdateTest {
     @Test
     void contextLoads(){
 
-        Item obj = new Item(104,"드레스",20000,"b.jpg",new Date());
+        Item obj = new Item(104,"야구모자",2,"bbbbb.jpg",null);
         try {
             service.modify(obj);
             service.get(104);

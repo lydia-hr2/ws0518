@@ -4,112 +4,99 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.Random;
 
 @RestController
 public class ChartImplController {
     @RequestMapping("/chart02")
-    public Object chart02(){
-        //[num,num,num,.....] 인 데이터의 형태 였음 --> chart01 참고
-        //{'category':[], 'data':[]} 로 x축의 value들은 category에 담고 각 축 마다의 값인 y축값은 data에 담기
-
+    // {'ctegory' : [], 'datas':[]}
+    public Object chart02() {
         JSONObject jo = new JSONObject();
 
         JSONArray jaCnt = new JSONArray();
-        for ( int i=1; i<=12; i++) {
+        for (int i = 1; i <= 12; i++) {
             Random r = new Random();
-            int cnt = r.nextInt(10000)+1;
+            int cnt = r.nextInt((10000)) + 1;
             jaCnt.add(cnt);
         }
         JSONArray jaYear = new JSONArray();
-        for ( int i=2012; i<=2023 ;i++){
+        for (int i = 2011; i <= 2023; i++) {
             jaYear.add(i);
         }
-        jo.put("category",jaYear);
-        jo.put("data",jaCnt);
+
+        jo.put("category", jaYear);
+        jo.put("datas", jaCnt);
         return jo;
     }
 
     @RequestMapping("/chart0301")
-    public Object chart0301(){
-        // 배열 in 배열 형태 [ [], [], .....]
+    public Object chart0301() {
+        //[[],[],[],[]]
         JSONArray ja = new JSONArray();
-        for ( int i=1; i<=5; i++){
+        for (int i = 1; i <= 5; i++) {
             Random r = new Random();
-            int num = r.nextInt(20)+1;
+            int num = r.nextInt(20) + 1;
             JSONArray jadata = new JSONArray();
-            jadata.add("data" + num); // 데이터의 이름을 가상으로 만듦
+            jadata.add("data" + num); //이름
             jadata.add(num);
             ja.add(jadata);
         }
         return ja;
     }
 
-
     @RequestMapping("/chart0302")
-    public Object chart0302(){
+    public Object chart0302() {
+        //[{},{},{},{}]
         JSONObject jo = new JSONObject();
-        JSONArray age = new JSONArray();
-        for ( int i=1; i<=10; i++){
-            age.add(i);
-        }
-        JSONArray ja = new JSONArray();
-        for (int i=1; i<=10; i++){
+
+        JSONArray ja01 = new JSONArray();
+        for (int i = 1; i <= 12; i++) {
             Random r = new Random();
-            int num = r.nextInt(50000)+1;
-            ja.add(num);
+            int cnt = r.nextInt((1000)) ;
+            ja01.add(cnt);
         }
-        jo.put("age", age);
-        jo.put("data",ja);
+        JSONArray ja02 = new JSONArray();
+        for (int i = 1; i <= 12; i++) {
+            Random r = new Random();
+            int cnt = r.nextInt((1000)) ;
+            ja02.add(cnt);
+        }
+        JSONArray ja03 = new JSONArray();
+        for (int i = 1; i <= 12; i++) {
+            Random r = new Random();
+            int cnt = r.nextInt((1000)) ;
+            ja03.add(cnt);
+        }
+        jo.put("r01", ja01);
+        jo.put("r02", ja02);
+        jo.put("r03", ja03);
         return jo;
     }
 
     @RequestMapping("/chart0303")
-    public Object chart0303(){
-        JSONObject jo = new JSONObject();
-
-        JSONArray china = new JSONArray();
-        JSONArray usa = new JSONArray();
-        JSONArray eu = new JSONArray();
-        JSONArray india = new JSONArray();
-
-        JSONArray jaY = new JSONArray();
-
-        for ( int i=1; i<33; i++){
-            jaY.add(i);
-        }
-        jo.put("yValue",jaY);
-
-        for (int i=1; i<33; i++){
-                Random r = new Random();
-                int num = r.nextInt(100)+1;
-            china.add(num);
-        }
-
-        for (int i=1; i<33; i++){
+    public Object chart0303() {
+        //[[],[],[],[]]
+        JSONArray ja = new JSONArray();
+        for (int i = 1; i <= 5; i++) {
             Random r = new Random();
-            int num = r.nextInt(100)+1;
-            usa.add(num);
+            int num = r.nextInt(200000);
+            JSONArray jadata = new JSONArray();
+            jadata.add("name" + num); //이름
+            jadata.add(num);
+            ja.add(jadata);
         }
-
-        for (int i=1; i<33; i++){
-            Random r = new Random();
-            int num = r.nextInt(100)+1;
-            eu.add(num);
-        }
-
-        for (int i=1; i<33; i++){
-            Random r = new Random();
-            int num = r.nextInt(100)+1;
-            india.add(num);
-        }
-        jo.put("china",china);
-        jo.put("usa",usa);
-        jo.put("eu",eu);
-        jo.put("india",india);
-
-        return jo;
+        return ja;
     }
 
-
+    @RequestMapping("/chart05")
+    public Object chart05(String year){
+        JSONArray ja = new JSONArray();
+        for(int i=1; i<=12; i++){
+            Random r = new Random();
+            int num = r.nextInt(100)+1;
+            ja.add(num);
+        }
+        return ja;
+    };
 }

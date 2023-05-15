@@ -1,28 +1,27 @@
 package com.kbstar.ncp;
 
-import com.kbstar.util.CFRfaceUtil;
-import com.kbstar.util.OCRutil;
+import com.kbstar.util.OCRUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
-public class OCRTests {
+@SpringBootTest
+class OCRTests {
 
     @Value("${uploadimgdir}")
-    String imgpath = "/Users/hyosunpark/uimg/";
-    @Test
-    void contextLoads() throws ParseException {
-        JSONObject jo = (JSONObject) OCRutil.getResult(imgpath,"passport.png");
-        log.info(jo.toJSONString());
+    String imgpath;
 
-        Map map = OCRutil.getData2(jo);
+    @Test
+    void contextLoads() {
+        JSONObject jo = null;
+        jo = (JSONObject) OCRUtil.getResult(imgpath,"biz4.jpg");
+//        log.info(jo.toJSONString());
+        Map map = OCRUtil.getData(jo);
         log.info(map.values().toString());
     }
 }

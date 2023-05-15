@@ -2,11 +2,10 @@ package com.kbstar.dto;
 
 import lombok.*;
 
-
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
 @Setter
+@Getter
 @ToString
 public class Adm {
     private String id;

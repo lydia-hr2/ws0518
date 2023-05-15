@@ -1,6 +1,7 @@
 package com.kbstar.service;
 
 import com.kbstar.dto.Marker;
+import com.kbstar.frame.KBService;
 import com.kbstar.mapper.MarkerMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,9 +45,8 @@ public class MarkerService implements KBService<Integer, Marker> {
     public List<Marker> get() throws Exception {
         return  mapper.selectall(); // 전체조회해주겠다.. dao에서;
     }
-
-    public List<Marker> getLoc(String loc) throws Exception {
-        return  mapper.getloc(loc);
+    public List<Marker> getLoc(String loc) throws Exception{
+        return mapper.getLoc(loc);
     }
 
 }

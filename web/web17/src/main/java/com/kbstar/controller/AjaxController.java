@@ -7,11 +7,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/ajax")
+@RequestMapping("/ajax") // /cust를 넣음으으로 기본적으로 주소에 /cust가 셋팅됨
 public class AjaxController {
+
     Logger logger = LoggerFactory.getLogger(this.getClass().getSimpleName());
     String dir = "ajax/";
-
     @RequestMapping("")
     public String main(Model model){
         model.addAttribute("left",dir+"left");
@@ -39,7 +39,6 @@ public class AjaxController {
         model.addAttribute("center",dir+"ajax03");
         return "index";
     }
-
 
     @RequestMapping("/ajax04")
     public String ajax04(Model model){

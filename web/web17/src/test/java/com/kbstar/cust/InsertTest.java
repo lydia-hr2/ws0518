@@ -1,4 +1,5 @@
 package com.kbstar.cust;
+
 import com.kbstar.dto.Cust;
 import com.kbstar.service.CustService;
 import lombok.extern.slf4j.Slf4j;
@@ -7,22 +8,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DuplicateKeyException;
 
-@SpringBootTest
 @Slf4j
-public class InsertTest {
+@SpringBootTest
+class InsertTest {
+
     @Autowired
     CustService service;
     @Test
-    void contextLoads(){
-        Cust obj = new Cust("id21", "pwd21", "summer");
+    void contextLoads() {
+        Cust obj = new Cust("id09","pwd03","심말숙");
         try {
             service.register(obj);
-            log.info("등록 정상");
+            log.info("등록이 되었다");
+            service.get();
         } catch (Exception e) {
-            if( e instanceof DuplicateKeyException) {
-                log.info("ID가 중복 되었습니다.-----------------------------------------------------");
-            }else {
-                log.info("시스템 장애입니다.-----------------------------------------------------");
+            log.info("등록 에러......");
+            e.printStackTrace();
+            if (e instanceof DuplicateKeyException) {
+                log.info("ID가 중복되었습니다------------------------------------------------");
+            }else{
+                log.info("시스템장애입니다. 관리자에게 문의바랍니다------------------------------");
             }
         }
     }

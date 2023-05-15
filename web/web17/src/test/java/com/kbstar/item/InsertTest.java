@@ -18,9 +18,10 @@ public class InsertTest {
     ItemService service;
     @Test
     void contextLoads(){
-        Item obj = new Item(0,"긴바지",20000,"b.jpg",null);
+        Item obj = new Item(0,"모자",113100,"cap.jpg",null);
         try {
             service.register(obj);
+            log.info("등록 정상");
             service.get();
         } catch (Exception e) {
             if( e instanceof DuplicateKeyException) {

@@ -13,8 +13,8 @@ import java.util.Date;
 
 public class Sales {
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private String rdate; // 오라클에서는 date-> 자바에서는 string ex) s2023-01-02
+    private String rdate;
     private int price;
-    private String gender; //gender CHAR(1)
+    private String gender;
 }
 

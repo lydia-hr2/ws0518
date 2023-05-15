@@ -9,25 +9,10 @@ import java.util.List;
 
 @Service
 public class ChartService {
+
     @Autowired
     ChartMapper chartMapper;
     public List<Chart> getMonthlyTotal() throws Exception{
         return chartMapper.getMonthlyTotal();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

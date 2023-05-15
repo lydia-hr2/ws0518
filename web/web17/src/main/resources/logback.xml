@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="LOGS_DIR" value="/C:/project/logs/" />
+    <property name="LOGS_DIR" value="c://project/logs" />
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>[%d{MM-dd HH:mm:ss}]%-5level %logger{36} - %msg%n</Pattern>
-<!--            <Pattern>[%d{MM-dd HH:mm:ss}][%thread] %-5level %logger{36} - %msg%n</Pattern>-->
+            <!--<Pattern>[%d{MM-dd HH:mm:ss}][%thread] %-5level %logger{36} - %msg%n</Pattern>-->
         </layout>
     </appender>
 
@@ -35,10 +35,10 @@
             </timeBasedFileNamingAndTriggeringPolicy>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
-        <!--롤링폴리시 : 5mb 이상(?)이거나 30시간이상(?)이면 새로운 log 파일을 생성해서 기록한다-->
     </appender>
 
-    <root level="INFO">
+
+    <root level="INFO"> <!--실제 배포전에는 info를 Error로 변경할 것-->
         <appender-ref ref="STDOUT" />
     </root>
 
@@ -47,23 +47,18 @@
         <appender-ref ref="FILE" />
     </logger>
 
+    <!--CustController에서 발생된 로그는 FILE2 찍어라~-->
     <logger name="com.kbstar.controller.CustController" level="INFO">
         <appender-ref ref="FILE2" />
     </logger>
 
-<!--INFO(trace>debug>info>warn>error)-->
-<!--    확인할필요 없는 Log는 off로 -->
+    <!--OFF를 안쓰면 로그가 엄청 많이 나온다-->
     <logger name="jdbc" level="OFF" />
-	<logger name="jdbc.sqlonly" level="INFO" />
-	<logger name="jdbc.sqltiming" level="OFF" />
-	<logger name="jdbc.audit" level="OFF" />
-	<logger name="jdbc.resultset" level="OFF" />
-	<logger name="jdbc.resultsettable" level="INFO" />
-	<logger name="jdbc.connection" level="OFF" />
-
-
-
-
-
+    <logger name="jdbc.sqlonly" level="INFO" />
+    <logger name="jdbc.sqltiming" level="OFF" />
+    <logger name="jdbc.audit" level="OFF" />
+    <logger name="jdbc.resultset" level="OFF" />
+    <logger name="jdbc.resultsettable" level="INFO" />
+    <logger name="jdbc.connection" level="OFF" />
 
 </configuration>

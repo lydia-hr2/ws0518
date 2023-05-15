@@ -17,12 +17,14 @@ class SelectLocTest {
     MarkerService service;
     @Test
     void contextLoads() {
+
         try {
-            service.getLoc("S");
-            log.info("-------입력하신 id에 대한 Marker(맛집추천) 정보 조회 성공! -------");
+            service.getLoc("s"); // id : int
+            log.info("-------입력하신 LOC에 대한 Marker(맛집추천) 정보 조회 성공! -------");
         } catch (Exception e) { // 오류 예외처리(자동)
+            //throw new RuntimeException(e);
             log.info("-------  Marker(맛집추천) 조회 에러 발생 -------");
-            e.printStackTrace();
+            // e.printStackTrace(); // 에러 자세히
         }
     }
 

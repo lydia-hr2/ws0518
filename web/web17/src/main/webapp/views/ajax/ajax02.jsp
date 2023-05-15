@@ -1,54 +1,54 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
 <script>
-    let ajax02 = {
-        init: function (){
+
+       let ajax02={
+        init:function(){
             this.keyupevent();
             this.sendevent();
         },
-        keyupevent: function (){
+           keyupevent:function(){
             $('#r_form > input[name=id]').keyup(function (){
-                var id = $(this).val(); // id값을 변수에 저장
-                if(id.length <= 3){
-                    $('#r_form > #idspan').text('ID는 4자리 이상입니다.');
-                    return;
+                var id = $(this).val();
+                if(id.length <=3){
+                    $('#r_form > #idspan').text('ID를 4자리 이상으로 만드세요');
+                    return; // 밑에 함수로 내려가지 않고 현재 함수에서 종료 하도록 리턴으로 제어한다. 개 중요하니 암기해라
                 };
-
-                $.ajax({ // id를 서버에 보내기
-                    url :'/checkid',
-                    data:{'id':id}, //id라는 이름으로 id 값을 전송하겠다
+                $.ajax({
+                    url:'/checkid',
+                    data:{'id':id}, // 'id' 라는 이름으로 id를 전송하 겠다
                     success:function (result){
                         if(result == 0){
-                            $('#r_form > #idspan').text('사용가능합니다.');
+                            $('#r_form > #idspan').text('사용가능한 ID입니다.')
                             $('#r_form > input[name="pwd"]').focus();
                         }else{
-                            $('#r_form > #idspan').text('사용불가능합니다.');
-                        }
-                    }
-                }); //
-            }); // r_form중 input중 name이 id 인 것
-        },
-        sendevent:function (){}
-    };
-    $(function(){
-        ajax02.init();
-    });
-</script>
+                            $('#r_form > #idspan').text('이미 사용중인 ID입니다..')
 
+                        }
+                    }  //주의!!!success일때는 세미콜론, 컴마가 없다!!!!!!!!!!!!!!!!!!!!
+                });
+            });
+           },
+           sendevent:function (){}
+    };
+
+    // hhh
+    $(function (){
+        ajax02.init();
+    })
+
+</script>
 
 <div class="col-sm-8 text-left">
     <div class="container">
-        <h3>AJAX02</h3>
-
+        <h3>ajax02</h3>
         <form id="r_form">
-
-            <span id="idspan"></span><br>
-            ID<input type="text" name="id" id="id"/><br>
-            PWD<input type="text" name="pwd"/><br>
-            NAME<input type="text" name="name"/><br>
-            <input type="button" value="Register"/><br>
+            ID<input type="text" name="id"><span id="idspan"></span><br>
+            PWD<input type="text" name="pwd"><br>
+            NAME<input type="text" name="name"><br>
+            <input type="button" name="Register"><br>
         </form>
+
     </div>
 </div>

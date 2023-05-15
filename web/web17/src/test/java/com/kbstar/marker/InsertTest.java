@@ -19,7 +19,7 @@ class InsertTest {
     @Test
     void contextLoads() {
 
-        Marker obj = new Marker(200,"부잣집","http://www.kbstar.com",  38.2222, 126.5555,"bread.jpg", "T");
+        Marker obj = new Marker(200,"부잣집","http://www.kbstar.com",  38.22, 126.5555,"bread.jpg", "T");
         try {
             service.register(obj);
             log.info("------- Marker(맛집추천) 정보 신규! 등록 완료 -------");

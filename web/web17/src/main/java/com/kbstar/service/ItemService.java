@@ -3,6 +3,7 @@ package com.kbstar.service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.kbstar.dto.Item;
+import com.kbstar.frame.KBService;
 import com.kbstar.mapper.ItemMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Service
 @Slf4j
-public class ItemService implements KBService<Integer, Item>{
+public class ItemService implements KBService<Integer, Item> {
 
     @Autowired
     ItemMapper mapper;

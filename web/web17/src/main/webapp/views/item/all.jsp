@@ -4,36 +4,39 @@
 
 <style>
     .medium_img{
-        width : 80px;
+        width:200px;
     }
 </style>
 
 <div class="col-sm-8 text-left">
-    <div class="low content">
-        <div class="col-sm-8 text-left">
-            <h1>Item All page</h1>
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>IMG</th>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>PRICE</th>
-                    <th>RDATE</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="obj" items="${allitem}">
+    <div class="container">
+        <h3>Item All Page</h3>
+        <div class = "row content">
+            <div class="col-sm-8 text-left">
+                <table class="table table-hover">
+                    <thead>
                     <tr>
-                        <td><img src="/img/${obj.imgname}" class="medium_img"></td>
-                        <td>${obj.id}</td>
-                        <td>${obj.name}</td>
-                        <td><fmt:formatNumber value="${obj.price}" type="currency"/></td>
-                        <td><fmt:formatDate value="${obj.rdate}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+                        <th>IMG</th>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>Price</th>
+                        <th>RegDate</th>
                     </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="obj" items="${allitem}"> <%--clist의 객채 1개씩 c라는 이름으로 끄집어 내겟다--%>
+                        <tr>
+                            <td><img class="medium_img" src="/uimg/${obj.imgname}"></td>
+                            <td>${obj.id}</td>
+                            <td>${obj.name}</td>
+                            <td><fmt:formatNumber value="${obj.price}" pattern="###,###원" /></td>
+                            <td><fmt:formatDate  value="${obj.rdate}" pattern="yyyy-MM-dd" /></td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
     </div>
 </div>

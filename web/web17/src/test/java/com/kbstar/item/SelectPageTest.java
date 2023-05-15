@@ -18,6 +18,7 @@ public class SelectPageTest {
     @Test
     void contextLoads(){
         PageInfo<Item> pageInfo;
+
         try {
             pageInfo = new PageInfo<>(service.getPage(1), 5); // 5:하단 네비게이션 개수
         } catch (Exception e) {

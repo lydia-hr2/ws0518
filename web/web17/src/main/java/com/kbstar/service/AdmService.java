@@ -1,26 +1,27 @@
 package com.kbstar.service;
+
 import com.kbstar.dto.Adm;
+import com.kbstar.frame.KBService;
 import com.kbstar.mapper.AdmMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
 @Slf4j
-public class AdmService implements KBService<String, Adm>{
-    /*
-     * 등록 및 가입 진행
-     * argument : Object
-     * return : null
-     * */
+public class AdmService implements KBService<String, Adm> {
     @Autowired
     AdmMapper mapper;
 
-    public AdmService(AdmMapper mapper) {
-        this.mapper = mapper;
-    }
-
+    /**
+     * 등록 및 가입 진행
+     * argument: Object
+     * return: null
+     *
+     * @param adm
+     **/
     @Override
     public void register(Adm adm) throws Exception {
         mapper.insert(adm);

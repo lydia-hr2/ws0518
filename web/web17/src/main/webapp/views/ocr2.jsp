@@ -1,35 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 <script>
-
+    // 화면에 접속 되면 로그인폼 객체에 이닛을 출력해라
     $(function (){
+        login_form.init();
     });
-
 </script>
+<div class="col-sm-8 text-left">
+    <div class="container col-sm-12">
+        <div class="col-sm-6">
+            <div class=col-sm-6">
+                <h1>OCR2</h1>
+                <h2>${result.date}</h2>
+                <h2>${result.time}</h2>
+                <h2>${result.mainmenu}</h2>
+                <h2>${result.sidemenu}</h2>
+                <form action="/ocr2impl" method="post" enctype="multipart/form-data" id="ocr2_form" class="form-horizontal well">
+                    <div class="form-group">
+                        <input type="file" class="form-control" id="img" name="img" placeholder="Input Image" >
+                    </div>
+                    <div class="btns">
+                        <button id="cfr1_btn" type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
 
-<div class="col-sm-8">
-    <div class="container">
-        <div class="row content">
-            <h1>ocr2</h1>
-            <h2>${result.country}</h2>
-            <h2>${result.num}</h2>
-            <h2>${result.givenname}</h2>
-            <h2>${result.surname}</h2>
-            <h2>${result.korname}</h2>
-            <h2>${result.birth}</h2>
-            <h2>${result.gender}</h2>
-            <h2>${result.start}</h2>
-            <h2>${result.end}</h2>
-            <hr>
-            <form action="/ocrimpl2" method="post" enctype="multipart/form-data" id="ocr2_form" class="form-horizontal well col-sm-8">
-                <div class="form-group" for="img">
-                    <input id="id" type="file" name="img" class="form-control" placeholder="Input image...">
-                </div>
-            <hr>
-                <button type="submit" id="ocr2_btn" name="login_btn" class="btn btn-primary">SEND</button>
-            </form>
-
+            </div>
         </div>
     </div>
 </div>
