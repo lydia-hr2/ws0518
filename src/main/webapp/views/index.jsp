@@ -45,6 +45,7 @@
             <div class="offcanvas__links">
                 <a href="/signin">Sign in</a>
                 <a href="#">FAQs</a>
+                <a href="#">${loginmember.name}님</a>
             </div>
             <div class="offcanvas__top__hover">
                 <span>Usd <i class="arrow_carrot-down"></i></span>

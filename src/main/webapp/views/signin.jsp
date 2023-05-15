@@ -26,7 +26,7 @@
                             <h6 class="coupon__code"><span class="icon_tag_alt"></span> Have no ID? <a href="#">Click
                             here</a> to join us</h6>
                             <h6 class="checkout__title">Register Form</h6>
-                            <form id="register_form" name="register_form" enctype="multipart/form-data" action="/signinimpl" method="post">
+                            <form id="register_form" name="register_form" enctype="multipart/form-data" action="/signinimpl" method="POST">
                             <div class="row">
                                 <div class="col-lg-10">
                                     <div class="checkout__input" >
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                                 <div class="checkout__input__checkbox">
-                                    <button type="submit" class="btn btn-primary" id="signin_btn" name="signin_btn">Sign In</button>
+                                    <button type="submit" class="btn btn-primary" id="signin_btn">Sign In</button>
                                 </div>
                             </form>
 

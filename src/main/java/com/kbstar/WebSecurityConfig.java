@@ -16,6 +16,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     //패스워드를 암호화해주는 encodePWD()
+
     @Bean
     public BCryptPasswordEncoder encodePWD() {
         return new BCryptPasswordEncoder();
