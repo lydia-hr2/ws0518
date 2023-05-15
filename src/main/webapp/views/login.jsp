@@ -1,13 +1,37 @@
+
+<script>
+
+    let login_form = {
+        init:function (){
+            $('#login_btn').click(function (){
+                login_form.send();
+            });
+        },
+        send:function (){
+            $('#login_form').attr({
+                'action':'/loginimpl', //form의 정보를 server의 application에 전달하세요
+                'method':'get'
+            });
+            $('#login_form').submit();
+        }
+    };
+
+    $(function (){
+        login_form.init(); // form정보를 서버에 전송
+    });
+
+</script>
+
 <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-option">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
-                        <h4>Sign In</h4>
+                        <h4>Log In</h4>
                         <div class="breadcrumb__links">
                             <a href="/">Home</a>
-                            <span>Sign In</span>
+                            <span>Log In</span>
                         </div>
                     </div>
                 </div>
@@ -20,12 +44,13 @@
     <section class="checkout spad">
         <div class="container">
             <div class="checkout__form">
+                <form action="#">
                     <div class="row">
                         <div class="col-lg-8 col-md-10">
                             <h6 class="coupon__code"><span class="icon_tag_alt"></span> Have no ID? <a href="#">Click
                             here</a> to join us</h6>
-                            <h6 class="checkout__title">Register Form</h6>
-                            <form id="register_form" name="register_form" action="/signinimpl" method="post">
+                            <h6 class="checkout__title">LOGIN FORM</h6>
+                            <form id="login_form" name="register_form" >
                             <div class="row">
                                 <div class="col-lg-10">
                                     <div class="checkout__input" >
@@ -36,33 +61,17 @@
                                         <p>Account Password<span>*</span></p>
                                         <input type="password" id="password" name="password">
                                     </div>
-                                    <div class="checkout__input" >
-                                        <p>Name<span>*</span></p>
-                                        <input type="text" id="name" name="name">
-                                    </div>
-<%--                                    <div class="checkout__input" id="address" name="address">--%>
-<%--                                        <p>Address<span>*</span></p>--%>
-<%--                                        <input type="text" placeholder="Street Address" class="checkout__input__add">--%>
-<%--                                        <input type="text" placeholder="Apartment, suite, unite ect (optinal)">--%>
-<%--                                    </div>--%>
-                                    <div class="checkout__input" >
-                                        <p>Tel<span>*</span></p>
-                                        <input type="text" id="tel" name="tel">
-                                    </div>
-                                    <div class="checkout__input" >
-                                        <p>Birth Date<span>*</span></p>
-                                        <input type="text" id="birth" name="birth">
-                                    </div>
                                 </div>
                             </div>
                                 <div class="checkout__input__checkbox">
-                                    <button type="submit" class="btn btn-primary" id="signin_btn">Sign In</button>
+                                    <button type="button" class="btn btn-primary" id="login_btn">Log In</button>
                                 </div>
                             </form>
 
 
                         </div>
                     </div>
+                </form>
             </div>
         </div>
     </section>

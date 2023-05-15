@@ -33,5 +33,11 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/login")
+    public String login(Model model) {
+        model.addAttribute("center","login");
+        return "index";
+    }
+
 
 }

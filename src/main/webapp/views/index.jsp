@@ -43,17 +43,10 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__option">
             <div class="offcanvas__links">
+                <a href="/login">Log in</a>
                 <a href="/signin">Sign in</a>
                 <a href="#">FAQs</a>
                 <a href="#">${loginmember.name}님</a>
-            </div>
-            <div class="offcanvas__top__hover">
-                <span>Usd <i class="arrow_carrot-down"></i></span>
-                <ul>
-                    <li>USD</li>
-                    <li>EUR</li>
-                    <li>USD</li>
-                </ul>
             </div>
         </div>
         <div class="offcanvas__nav__option">
@@ -82,16 +75,9 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
+                                <a href="/login">Log in</a>
                                 <a href="/signin">Sign in</a>
                                 <a href="#">FAQs</a>
-                            </div>
-                            <div class="header__top__hover">
-                                <span>Usd <i class="arrow_carrot-down"></i></span>
-                                <ul>
-                                    <li>USD</li>
-                                    <li>EUR</li>
-                                    <li>USD</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
