@@ -31,7 +31,6 @@
             $('#delete_btn').on('click', (e) => {
                 let cartId = $(e.currentTarget).data('item-id');
                 e.preventDefault();
-                console.log("AJAX 진행");
                 $.ajax({
                     method: 'post',
                     url: '/cart/delete',
@@ -41,7 +40,7 @@
                     $.ajax({
                         method : 'get',
                         url : '/cart/info',
-                        data : {id : ${loginUser.id}}
+                        data : {id : ${loginmember.id}}
                     }).done((result)=>{
                         $('#totalCnt').text(result.cnt);
                         $('#totalSub').text(addComma(result.price));
@@ -157,7 +156,7 @@
                             <li>Subtotal <span id="totalSub"><fmt:formatNumber value="${total}" pattern="#,###,###원"/></span></li>
                             <li>Total <span id="totalSum"><fmt:formatNumber value="${total}" pattern="#,###,###원"/></span></li>
                         </ul>
-                        <a href="/order/${loginUser.id}" class="primary-btn" role="button">Proceed to checkout</a>
+                        <a href="/order/${loginmember.id}" class="primary-btn" role="button">Proceed to checkout</a>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@
         init : function () {
             $(document).on('click', '.add-cart', function(e) {
                 let itemId = $(e.currentTarget).data('item-id');
-                let userId = ${loginUser.id};
+                let userId = ${loginmember.id};
                 if (userId == null || userId == '') {
                     swal("로그인 후 이용해주세요");
                 }
