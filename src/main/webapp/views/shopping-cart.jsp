@@ -123,6 +123,8 @@
                                     <tr>
                                     <c:set var="total" value="${total + (cart.price * cart.cnt)}"/>
                                     <c:set var="qnt" value="${qnt + cart.cnt}"/>
+                                    <input type="hidden" id="totalValue" value="${total + (cart.price * cart.cnt)}">
+                                    <input type="hidden" id="qntValue" value="${qnt + cart.cnt}">
                                     </c:forEach>
                             </tbody>
                         </table>
@@ -155,7 +157,7 @@
                             <li>Subtotal <span id="totalSub"><fmt:formatNumber value="${total}" pattern="#,###,###원"/></span></li>
                             <li>Total <span id="totalSum"><fmt:formatNumber value="${total}" pattern="#,###,###원"/></span></li>
                         </ul>
-                        <a href="#" class="primary-btn">Proceed to checkout</a>
+                        <a href="/order/${loginUser.id}" class="primary-btn" role="button">Proceed to checkout</a>
                     </div>
                 </div>
             </div>

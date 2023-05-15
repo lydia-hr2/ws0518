@@ -39,5 +39,16 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/checkout")
+    public String checkout(Model model) {
+        model.addAttribute("center","checkout");
+        return "index";
+    }
+
+    @RequestMapping("/cart")
+    public String cart(Model model) {
+        model.addAttribute("center","shopping-cart");
+        return "index";
+    }
 
 }

@@ -17,4 +17,7 @@ public class Item {
     private int price;
     private Date rdate;
     private Date udate;
+
+    //mybatis
+    private int cnt;
 }

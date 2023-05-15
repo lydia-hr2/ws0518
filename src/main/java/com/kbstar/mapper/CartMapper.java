@@ -1,14 +1,14 @@
 package com.kbstar.mapper;
 
 import com.kbstar.dto.Cart;
+import com.kbstar.dto.Item;
 import org.apache.ibatis.annotations.Mapper;
-import x.senior.item.Item;
 
 import java.util.List;
 
 @Mapper
 public interface CartMapper {
-    void addCart(int userId, int itemId);
+    void addCart(Cart cart);
 
     List<Item> findByUserId(int userId);
 
@@ -17,5 +17,8 @@ public interface CartMapper {
     void increaseCnt(int userId, int itemId);
 
     void deleteItem(int id);
+
+    void deleteCart(int userId);
+
 
 }

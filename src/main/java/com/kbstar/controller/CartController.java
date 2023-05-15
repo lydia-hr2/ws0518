@@ -1,14 +1,15 @@
 package com.kbstar.controller;
 
+import com.kbstar.dto.Item;
 import com.kbstar.service.CartService;
-import com.kbstar.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import x.senior.item.Item;
-import x.senior.user.UserService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -35,7 +36,7 @@ public class CartController {
     public String myCart(@PathVariable int userId, Model model) {
         List<Item> myCart = cartService.myCart(userId);
         model.addAttribute("myCart", myCart);
-        model.addAttribute("main", "shopping-cart");
+        model.addAttribute("center", "shopping-cart");
         return "index";
     }
 
