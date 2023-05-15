@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="x.senior.cart.CartMapper">
+    <insert id="addCart" parameterType="integer">
+<!-- ON DUPLICATE 구문은 cust_id와 item_id 컬럼값이 이미 테이블에 존재하는 경우 -->
+<!-- cnt 값을 업데이트 함. MySQL에서는 dual 테이블이 없으므로 대신 'NULL' 을 사용하여 동일한 효과-->
+        INSERT INTO cart (id, user_id, item_id, cnt, rdate)
+        VALUES (NULL, #{userId}, #{itemId}, #{cnt}, NOW())
+        ON DUPLICATE KEY UPDATE cnt = cnt + #{cnt};
+    </insert>
+    <select id="findByItemId" resultType="x.senior.cart.Cart">
+        SELECT *
+        FROM Cart
+        WHERE item_id = #{itemId}
+    </select>
+    <select id="findByUserId" parameterType="int" resultType="x.senior.item.Item">
+        select CART.item_id as id
+             , I.name
+             , I.img
+             , I.price
+             , I.size
+             , I.color
+             , CART.cnt
+        from CART
+                 left join ITEM I on CART.item_id = I.id
+                 left join USER U on CART.user_id = U.id
+        where U.id = #{id}
+    </select>
+    <update id="increaseCnt" parameterType="integer">
+        UPDATE Cart SET cnt = cnt + 1
+        WHERE user_id = #{userId}
+        AND item_id = #{itemId}
+    </update>
+    <delete id="deleteItem" parameterType="integer">
+        DELETE FROM CART WHERE id = #{id}
+    </delete>
+</mapper>
