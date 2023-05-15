@@ -29,29 +29,16 @@
                             <div class="row">
                                 <div class="col-lg-10">
                                     <div class="checkout__input" >
-                                        <p>Email<span>*</span></p>
-                                        <input type="text" id="email" name="email">
-                                    </div>
-                                    <div class="checkout__input" >
-                                        <p>Account Password<span>*</span></p>
-                                        <input type="password" id="password" name="password">
+                                        <p>ID<span>*</span></p>
+                                        <input type="text" id="memberId" name="memberId">
                                     </div>
                                     <div class="checkout__input" >
                                         <p>Name<span>*</span></p>
                                         <input type="text" id="name" name="name">
                                     </div>
-<%--                                    <div class="checkout__input" id="address" name="address">--%>
-<%--                                        <p>Address<span>*</span></p>--%>
-<%--                                        <input type="text" placeholder="Street Address" class="checkout__input__add">--%>
-<%--                                        <input type="text" placeholder="Apartment, suite, unite ect (optinal)">--%>
-<%--                                    </div>--%>
                                     <div class="checkout__input" >
-                                        <p>Tel<span>*</span></p>
-                                        <input type="text" id="tel" name="tel">
-                                    </div>
-                                    <div class="checkout__input" >
-                                        <p>Birth Date<span>*</span></p>
-                                        <input type="text" id="birth" name="birth">
+                                        <p>Password<span>*</span></p>
+                                        <input type="password" id="password" name="password">
                                     </div>
                                 </div>
                             </div>
@@ -59,8 +46,6 @@
                                     <button type="submit" class="btn btn-primary" id="signin_btn">Sign In</button>
                                 </div>
                             </form>
-
-
                         </div>
                     </div>
             </div>

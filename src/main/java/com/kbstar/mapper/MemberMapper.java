@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Mapper
 @Repository
-public interface MemberMapper extends ShopMapper<Integer, Member> {
+public interface MemberMapper extends ShopMapper<String, Member> {
 }

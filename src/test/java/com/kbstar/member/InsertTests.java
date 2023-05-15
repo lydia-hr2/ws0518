@@ -18,7 +18,7 @@ class InsertTests {
     MemberService memberService;
     @Test
     void contextLoads() {
-        Member test = new Member("test", "aass", "입력안됌", "11", "11");
+        Member test = new Member("bbb@naver.com","박말숙","11111");
         try {
             test.setPassword(encoder.encode(test.getPassword()));
             memberService.register(test);

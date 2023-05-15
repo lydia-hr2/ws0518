@@ -12,7 +12,7 @@ public interface ShopMapper<K,V> {
 
     public void update(V v) throws Exception;
 
-    public V Select(K k) throws Exception;
+    public V select(K k) throws Exception;
 
     public List<V> selectall() throws Exception;
 

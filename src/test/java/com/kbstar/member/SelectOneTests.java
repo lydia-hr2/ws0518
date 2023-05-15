@@ -8,23 +8,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import java.util.List;
-
-@SpringBootTest
 @Slf4j
-class DeleteAllTests {
+@SpringBootTest
+class SelectOneTests {
     @Autowired
     private BCryptPasswordEncoder encoder;
 
     @Autowired
-    MemberService service;
+    MemberService memberService;
     @Test
-    void contextLoads() throws Exception {
-        List<Member> memberList = service.get();
+    void contextLoads() {
         try {
-            for (Member obj:memberList) {
-                service.remove(obj.getMemberId());
-            }
+
+            Member result = memberService.get("bbb@naver.com");
+            log.info(result.toString());
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);

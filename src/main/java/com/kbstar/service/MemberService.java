@@ -11,7 +11,7 @@ import java.util.List;
 @Valid
 @Service
 @Slf4j
-public class MemberService implements ShopService<Integer, Member>{
+public class MemberService implements ShopService<String, Member>{
 
     @Autowired
     MemberMapper mapper;
@@ -22,7 +22,7 @@ public class MemberService implements ShopService<Integer, Member>{
     }
 
     @Override
-    public void remove(Integer k) throws Exception {
+    public void remove(String k) throws Exception {
         mapper.delete(k);
     }
 
@@ -32,8 +32,8 @@ public class MemberService implements ShopService<Integer, Member>{
     }
 
     @Override
-    public Member get(Integer k) throws Exception {
-        return mapper.Select(k);
+    public Member get(String k) throws Exception {
+        return mapper.select(k);
     }
 
     @Override

@@ -8,15 +8,19 @@
 
     <insert id="insert" parameterType="member">
         INSERT INTO member
-        VALUES (item_seq.NEXTVAL,#{email},#{password},#{name},#{tel},#{birth},SYSDATE,1)
+        VALUES (item_seq.NEXTVAL,#{memberId},#{name},#{password},SYSDATE,1)
     </insert>
+
+    <select id="select" parameterType="String" resultType="member">
+        SELECT * FROM member WHERE member_id=#{memberId}
+    </select>
 
     <select id="selectall" resultType="member">
         SELECT * FROM member
     </select>
 
-    <delete id="delete" parameterType="Integer">
-        DELETE FROM member WHERE member_id=#{member_id}
+    <delete id="delete" parameterType="String">
+        DELETE FROM member WHERE member_id=#{memberId}
     </delete>
 
 </mapper>

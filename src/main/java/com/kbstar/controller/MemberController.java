@@ -28,13 +28,14 @@ public class MemberController {
 
     @Valid
     @RequestMapping("/signinimpl")
-    public String signinimpl(@Valid @RequestBody Member member, Model model, HttpSession session) throws Exception {
+    public String signinimpl(@Valid Member member, Model model, HttpSession session) throws Exception {
         try {
             member.setPassword(encoder.encode(member.getPassword()));
             memberService.register(member);
-            session.setMaxInactiveInterval(100000);
-            session.setAttribute("loginmember",member);
+//            session.setMaxInactiveInterval(100000);
+//            session.setAttribute("loginmember",member);
         } catch (Exception e) {
+            e.printStackTrace();
             throw new Exception("가입 오류");
         }
         model.addAttribute("rmember", member);
@@ -43,16 +44,17 @@ public class MemberController {
 
 
     @RequestMapping("/loginimpl")
-    public String loginimpl(Model model, Integer member_id, String pwd, HttpSession session) {
+    public String loginimpl(Model model, String memberId, String password, HttpSession session) {
         String nextPage = "loginfail";
         try {
-            Member member = memberService.get(member_id);
-            if (member != null && encoder.matches(pwd, member.getPassword())) {
+            Member member = memberService.get(memberId);
+            if (member != null && encoder.matches(password, member.getPassword())) {
                 nextPage = "loginok";
                 session.setMaxInactiveInterval(100000);// 한 session의 제한시간
                 session.setAttribute("loginmember", member); //session에 logincust라는 이름으로 cust를 넣어줌 --> login을 메모리에 제한시간만큼 유지
             }
         } catch (Exception e) {
+            e.printStackTrace();
             throw new RuntimeException("시스템 장애 잠시 후 다시 로그인 하세요.");
         }
         model.addAttribute("center", nextPage);
