@@ -22,6 +22,7 @@ public class MainController {
         return "index";
     }
 
+
     @RequestMapping("/shop")
     public String shop(Model model) {
         model.addAttribute("center","shop");
@@ -55,6 +56,36 @@ public class MainController {
     @RequestMapping("/cart")
     public String cart(Model model) {
         model.addAttribute("center","shopping-cart");
+        return "index";
+    }
+
+    @RequestMapping("/about")
+    public String about(Model model) {
+        model.addAttribute("center","about");
+        return "index";
+    }
+
+    @RequestMapping("/blog-details")
+    public String blogdetails(Model model) {
+        model.addAttribute("center","blog-details");
+        return "index";
+    }
+
+    @RequestMapping("/shop-details")
+    public String shopdetails(Model model) {
+        model.addAttribute("center","shop-details");
+        return "index";
+    }
+
+    @RequestMapping("/shopping-cart")
+    public String shoppingcart(Model model) {
+        model.addAttribute("center","shopping-cart");
+        return "index";
+    }
+
+    @RequestMapping("/faq")
+    public String faq(Model model) {
+        model.addAttribute("center","faq");
         return "index";
     }
 

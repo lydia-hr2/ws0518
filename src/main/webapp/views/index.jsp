@@ -120,7 +120,7 @@
                                 <li><a href="/blog">Blog Details</a></li>
                             </ul>
                         </li>
-                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/reviewall">Review</a></li>
                         <li><a href="/contact">Contacts</a></li>
                     </ul>
                 </nav>

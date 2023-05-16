@@ -6,6 +6,18 @@
 
 <mapper namespace="com.kbstar.mapper.ReviewMapper">
 
+
+    <select id="search" parameterType="reviewSearch" resultType="review">
+        SELECT * FROM review
+        <where>
+            <if test="itemId != null and itemId != 0 ">
+                itemId = #{itemId}
+            </if>
+            <if test="rate != null and rate != 0 ">
+                AND rate &gt; #{rate}
+            </if>
+        </where>
+    </select>
     <insert id="insert" parameterType="review">
         INSERT INTO review
         VALUES (review_seq.NEXTVAL,#{userId},#{itemId},#{title},#{review},#{rate})

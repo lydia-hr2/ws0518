@@ -12,7 +12,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Review List</h6>
-            <form action="/reviewsearch"id="search_form" name="search_form" class="form-inline well">
+            <form action="/reviewsearch"id="search_form" name="search_form" class="form-inline well" method="post">
 
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="itemId">Product:</label>

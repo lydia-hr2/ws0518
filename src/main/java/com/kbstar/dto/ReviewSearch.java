@@ -8,7 +8,6 @@ import lombok.*;
 @Getter
 @ToString
 public class ReviewSearch {
-
     private int itemId;
     private int rate;
 }
