@@ -11,21 +11,23 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Calendar;
 
-public class WeatherUtil {
-    public static String getWeather1(String loc) throws Exception{
+public class WeatherUtil  {
+    public static String getWeather1(String loc)throws Exception{
+
         Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);
         int month = c.get(Calendar.MONTH)+1;
         int day = c.get(Calendar.DATE);
 
         String month_str = month+"";
-        if(month_str.length() ==1){
+        if(month_str.length() == 1){
             month_str = "0"+month_str;
         }
-        String today = ""+year+month_str+day+"0600";
+
+        String today = ""+ year+month_str+day+"0600";
 
         StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/1360000/MidFcstInfoService/getMidFcst"); /*URL*/
-        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=GzLKpZnRfILovTiCAh98dUSv8nzd9RCO86WuGrZVWLxuJQ0H%2Fyr47Xe5dqBSiBYqwrbGyYeouVulAc7BHHf7ZA%3D%3D"); /*Service Key*/
+        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=Kb8EHI7tu3sjEhgFz3gwym9e2ei9UdNOCm8s3P37EzLjkNSQ4e9G4IMjvDOmeaVb9AOoS3HCf0qgaBD0bPcJTQ%3D%3D"); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지번호*/
         urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("10", "UTF-8")); /*한 페이지 결과 수*/
         urlBuilder.append("&" + URLEncoder.encode("dataType","UTF-8") + "=" + URLEncoder.encode("JSON", "UTF-8")); /*요청자료형식(XML/JSON)Default: XML*/
@@ -49,35 +51,38 @@ public class WeatherUtil {
         }
         rd.close();
         conn.disconnect();
-        //System.out.println(sb.toString());
 
-        //java Object -> JSON
-        //JSON -> java Object
+        //JSON -> Java Object로 변환하기
+
+        //1. JSON String을 JSON Object로
         JSONParser jsonParser = new JSONParser();
         JSONObject jo = (JSONObject) jsonParser.parse(sb.toString());
-        JSONObject response = (JSONObject)jo.get("response");
+        JSONObject response = (JSONObject) jo.get("response");
         JSONObject body = (JSONObject)response.get("body");
         JSONObject items = (JSONObject)body.get("items");
-        JSONArray item = (JSONArray) items.get("item");
+        JSONArray item = (JSONArray)items.get("item");
         JSONObject obj = (JSONObject) item.get(0);
-        String result = (String) obj.get("wfSv");
-        return result;
+        String wfSv = (String) obj.get("wfSv");
+
+        return wfSv;
     }
 
-    public static Object getWeather2(String loc) throws Exception{
+    public static Object getWeather2(String loc)throws Exception{
+
         Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);
         int month = c.get(Calendar.MONTH)+1;
         int day = c.get(Calendar.DATE);
 
         String month_str = month+"";
-        if(month_str.length() ==1){
+        if(month_str.length() == 1){
             month_str = "0"+month_str;
         }
-        String today = ""+year+month_str+day+"0600";
+
+        String today = ""+ year+month_str+day+"0600";
 
         StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/1360000/MidFcstInfoService/getMidFcst"); /*URL*/
-        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=GzLKpZnRfILovTiCAh98dUSv8nzd9RCO86WuGrZVWLxuJQ0H%2Fyr47Xe5dqBSiBYqwrbGyYeouVulAc7BHHf7ZA%3D%3D"); /*Service Key*/
+        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=Kb8EHI7tu3sjEhgFz3gwym9e2ei9UdNOCm8s3P37EzLjkNSQ4e9G4IMjvDOmeaVb9AOoS3HCf0qgaBD0bPcJTQ%3D%3D"); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지번호*/
         urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("10", "UTF-8")); /*한 페이지 결과 수*/
         urlBuilder.append("&" + URLEncoder.encode("dataType","UTF-8") + "=" + URLEncoder.encode("JSON", "UTF-8")); /*요청자료형식(XML/JSON)Default: XML*/
@@ -102,15 +107,17 @@ public class WeatherUtil {
         rd.close();
         conn.disconnect();
 
+        //JSON -> Java Object로 변환하기
+        //2. JSON을 바로 HTML로 내려보내고 화면에서 파싱한다 (JSON 자체를 내려보냄)
         JSONParser jsonParser = new JSONParser();
         JSONObject jo = (JSONObject) jsonParser.parse(sb.toString());
 
         return jo;
     }
 
-    public static Object getWeather3(String loc) throws Exception{
+    public static Object getWeather3() throws Exception{
         StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/1360000/AsosHourlyInfoService/getWthrDataList"); /*URL*/
-        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=GzLKpZnRfILovTiCAh98dUSv8nzd9RCO86WuGrZVWLxuJQ0H%2Fyr47Xe5dqBSiBYqwrbGyYeouVulAc7BHHf7ZA%3D%3D"); /*Service Key*/
+        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=Kb8EHI7tu3sjEhgFz3gwym9e2ei9UdNOCm8s3P37EzLjkNSQ4e9G4IMjvDOmeaVb9AOoS3HCf0qgaBD0bPcJTQ%3D%3D"); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지번호 Default : 10*/
         urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("10", "UTF-8")); /*한 페이지 결과 수 Default : 1*/
         urlBuilder.append("&" + URLEncoder.encode("dataType","UTF-8") + "=" + URLEncoder.encode("JSON", "UTF-8")); /*요청자료형식(XML/JSON) Default : XML*/
@@ -120,7 +127,7 @@ public class WeatherUtil {
         urlBuilder.append("&" + URLEncoder.encode("startHh","UTF-8") + "=" + URLEncoder.encode("01", "UTF-8")); /*조회 기간 시작시(HH)*/
         urlBuilder.append("&" + URLEncoder.encode("endDt","UTF-8") + "=" + URLEncoder.encode("20230509", "UTF-8")); /*조회 기간 종료일(YYYYMMDD) (전일(D-1) 까지 제공)*/
         urlBuilder.append("&" + URLEncoder.encode("endHh","UTF-8") + "=" + URLEncoder.encode("12", "UTF-8")); /*조회 기간 종료시(HH)*/
-        urlBuilder.append("&" + URLEncoder.encode("stnIds","UTF-8") + "=" + URLEncoder.encode(loc, "UTF-8")); /*종관기상관측 지점 번호 (활용가이드 하단 첨부 참조)*/
+        urlBuilder.append("&" + URLEncoder.encode("stnIds","UTF-8") + "=" + URLEncoder.encode("108", "UTF-8")); /*종관기상관측 지점 번호 (활용가이드 하단 첨부 참조)*/
         URL url = new URL(urlBuilder.toString());
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
@@ -139,9 +146,11 @@ public class WeatherUtil {
         }
         rd.close();
         conn.disconnect();
+        System.out.println(sb.toString());
 
         JSONParser jsonParser = new JSONParser();
         JSONObject jo = (JSONObject) jsonParser.parse(sb.toString());
+
         return jo;
     }
 }

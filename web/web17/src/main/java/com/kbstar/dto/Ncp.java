@@ -11,4 +11,3 @@ import org.springframework.web.multipart.MultipartFile;
 public class Ncp {
     private MultipartFile img;
 }
-

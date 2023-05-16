@@ -12,6 +12,7 @@ public class Web17Application {
         SpringApplication.run(Web17Application.class, args);
     }
 
+
     @Bean
     public InternalResourceViewResolver setupViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
@@ -19,4 +20,5 @@ public class Web17Application {
         resolver.setSuffix(".jsp");
         return resolver;
     }
+
 }

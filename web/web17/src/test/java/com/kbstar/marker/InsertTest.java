@@ -7,31 +7,25 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DuplicateKeyException;
-/**
- * 4.27 정인보 insert 테스트 완료
- * 테스트 id : 200 / 부잣집
- */
-@Slf4j // 로그 찍을거야
+
+@Slf4j
 @SpringBootTest
 class InsertTest {
     @Autowired
     MarkerService service;
-    @Test
-    void contextLoads() {
 
-        Marker obj = new Marker(200,"부잣집","http://www.kbstar.com",  38.22, 126.5555,"bread.jpg", "T");
+    @Test
+    void contextLoads() throws Exception {
         try {
-            service.register(obj);
-            log.info("------- Marker(맛집추천) 정보 신규! 등록 완료 -------");
-        } catch (Exception e) { // 오류 예외처리(자동)
-            //throw new RuntimeException(e);
-            if(e instanceof DuplicateKeyException){
-                log.info("------- 등록실패 : Marker(맛집추천) 정보에 동일한 id가 존재합니다. -------");
-            }else{
-                log.info("------- Marker(맛집추천) 신규 등록에 실패했습니다.  -------");
+            service.register(new Marker(0,"가니가니", "http://www.naver.com", 37.635327, 127.010507, "yang.jpg", "S"));
+            log.info("등록 정상");
+        } catch (Exception e) {
+            if (e instanceof DuplicateKeyException) {
+                log.info("이미 사용 중인 ID입니다!----------------------------------------");
+            } else {
+                log.info("등록에러..");
+                e.printStackTrace();
             }
-           // e.printStackTrace(); // 에러 자세히
         }
     }
-
 }

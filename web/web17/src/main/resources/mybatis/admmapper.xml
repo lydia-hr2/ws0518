@@ -14,9 +14,9 @@
         INSERT INTO adm VALUES (#{id},#{pwd},#{lev})
     </insert>
     <update id="update" parameterType="adm">
-        UPDATE adm SET lev=#{lev},pwd=#{pwd} WHERE id=#{id}
+        UPDATE adm SET pwd=#{pwd}, lev=#{lev} WHERE id=#{id}
     </update>
-    <delete id="delete" parameterType="String"> /*여기서 스트링은 웨얼값에 있는 id의 타입이다*/
+    <delete id="delete" parameterType="String">
         DELETE FROM adm WHERE id=#{id}
     </delete>
 

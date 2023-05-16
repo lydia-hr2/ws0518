@@ -1,42 +1,39 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <style>
-    .medium_img{
-        width:200px;
+    .medium_img {
+        width: 80px;
     }
 </style>
 
 <div class="col-sm-8 text-left">
-    <div class="container">
-        <h3>Item All Page</h3>
-        <div class = "row content">
-            <div class="col-sm-8 text-left">
-                <table class="table table-hover">
-                    <thead>
+    <div class="row content">
+        <div class="col-sm-6 text-left">
+            <h3>¿¸√º ªÛ«∞ ∫∏±‚ »≠∏È¿‘¥œ¥Ÿ.</h3>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>IMG</th>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>PRICE</th>
+                    <th>RDATE</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="obj" items="${allitem}">
                     <tr>
-                        <th>IMG</th>
-                        <th>ID</th>
-                        <th>NAME</th>
-                        <th>Price</th>
-                        <th>RegDate</th>
+                        <td><img class="medium_img" src="/uimg/${obj.imgname}"></td>
+                        <td><a href="/item/get?id=${obj.id}">${obj.id}</a></td>
+                        <td>${obj.name}</td>
+                        <td><fmt:formatNumber value="${obj.price}" pattern="###,###ø¯"/></td>
+                        <td><fmt:formatDate value="${obj.rdate}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
                     </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach var="obj" items="${allitem}"> <%--clistÏùò Í∞ùÏ±Ñ 1Í∞úÏî© cÎùºÎäî Ïù¥Î¶ÑÏúºÎ°ú ÎÅÑÏßëÏñ¥ ÎÇ¥Í≤üÎã§--%>
-                        <tr>
-                            <td><img class="medium_img" src="/uimg/${obj.imgname}"></td>
-                            <td>${obj.id}</td>
-                            <td>${obj.name}</td>
-                            <td><fmt:formatNumber value="${obj.price}" pattern="###,###Ïõê" /></td>
-                            <td><fmt:formatDate  value="${obj.rdate}" pattern="yyyy-MM-dd" /></td>
-                        </tr>
-                    </c:forEach>
-                    </tbody>
-                </table>
-            </div>
+                </c:forEach>
+                </tbody>
+            </table>
         </div>
-
     </div>
 </div>

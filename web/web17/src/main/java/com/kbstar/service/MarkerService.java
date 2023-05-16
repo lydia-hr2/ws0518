@@ -1,52 +1,56 @@
 package com.kbstar.service;
 
+
 import com.kbstar.dto.Marker;
 import com.kbstar.frame.KBService;
 import com.kbstar.mapper.MarkerMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
 public class MarkerService implements KBService<Integer, Marker> {
-
-    @Autowired
-    MarkerMapper mapper; // Marke의 DB와 연결된 dao 사용하겠다고 쓰기.
-
     /**
-     * 등록 & 가입 진행
-     * argument : object
+     * 등록 및 가입 진행
+     * argument : Object
      * return : null
      *
      * @param marker
-     **/
+     */
+
+    @Autowired
+    MarkerMapper mapper;
+
     @Override
     public void register(Marker marker) throws Exception {
-        mapper.insert(marker); // dao에 insert하겠다. dto데이터를
+        mapper.insert(marker);
     }
 
     @Override
-    public void remove(Integer integer) throws Exception {
-        mapper.delete(integer); // int id값 넣으면 삭제하겠다. dao에서
+    public void remove(Integer s) throws Exception {
+        mapper.delete(s);
     }
 
     @Override
     public void modify(Marker marker) throws Exception {
-        mapper.update(marker);  // dao에 update하겠다. dto데이터를
+        mapper.update(marker);
     }
 
     @Override
-    public Marker get(Integer integer) throws Exception {
-        return  mapper.select(integer); // int id값 넣으면 조회해주겠다.. dao에서;
+    public Marker get(Integer s) throws Exception {
+        return mapper.select(s);
     }
 
     @Override
     public List<Marker> get() throws Exception {
-        return  mapper.selectall(); // 전체조회해주겠다.. dao에서;
+        return mapper.selectall();
     }
+
     public List<Marker> getLoc(String loc) throws Exception{
-        return mapper.getLoc(loc);
+        return mapper.getloc(loc);
     }
 
 }

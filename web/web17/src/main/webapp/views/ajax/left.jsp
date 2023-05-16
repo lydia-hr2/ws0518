@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="col-sm-2 sidenav">
@@ -8,5 +8,6 @@
     <p><a href="/ajax/ajax03">AJAX03</a></p>
     <p><a href="/ajax/ajax04">AJAX04</a></p>
     <p><a href="/ajax/ajax05">AJAX05</a></p>
+
 
 </div>

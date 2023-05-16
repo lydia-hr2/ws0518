@@ -1,44 +1,56 @@
 package com.kbstar.service;
 
+
+import com.kbstar.dto.Marker;
 import com.kbstar.dto.MarkerDesc;
 import com.kbstar.frame.KBService;
 import com.kbstar.mapper.MarkerDescMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
-public class MarkerdescService implements KBService<Integer, MarkerDesc> {
+public class MarkerDescService implements KBService<Integer, MarkerDesc> {
+
+    /**
+     * 등록 및 가입 진행
+     * argument : Object
+     * return : null
+     *
+     * @param markerDesc
+     */
 
     @Autowired
-    MarkerDescMapper mapper; // Marke의 DB와 연결된 dao 사용하겠다고 쓰기.
-
+    MarkerDescMapper mapper;
     @Override
-    public void register(MarkerDesc markerdesc) throws Exception {
-        mapper.insert(markerdesc);
+    public void register(MarkerDesc markerDesc) throws Exception {
+        mapper.insert(markerDesc);
     }
 
     @Override
-    public void remove(Integer integer) throws Exception {
-        mapper.delete(integer);
+    public void remove(Integer k) throws Exception {
+        mapper.delete(k);
     }
 
     @Override
-    public void modify(MarkerDesc markerdesc) throws Exception {
-        mapper.update(markerdesc);
+    public void modify(MarkerDesc markerDesc) throws Exception {
+        mapper.update(markerDesc);
     }
 
     @Override
-    public MarkerDesc get(Integer integer) throws Exception {
-        return mapper.select(integer);
+    public MarkerDesc get(Integer k) throws Exception {
+        return mapper.select(k);
     }
 
     @Override
     public List<MarkerDesc> get() throws Exception {
         return mapper.selectall();
     }
-    public List<MarkerDesc> getmarkerdesc(int id) throws Exception {
-        return mapper.getmarkerdesc(id);
+
+    public List<MarkerDesc> getMarkerDesc(Integer marker_id) throws Exception{
+        return mapper.getmarkerdesc(marker_id);
     }
 }

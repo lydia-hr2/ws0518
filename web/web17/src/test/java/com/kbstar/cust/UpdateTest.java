@@ -10,17 +10,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 @Slf4j
 @SpringBootTest
 class UpdateTest {
-
     @Autowired
     CustService service;
-    @Test
-void contextLoads() {
 
-    try {
-        service.modify(new Cust("id01","pwd05","하하하"));
+    @Test
+    void contextLoads() throws Exception {
+        Cust obj = new Cust("id01", "pwd09", "james");
+        try {
+            service.modify(obj);
+            log.info("수정 정상");
         } catch (Exception e) {
-        log.info("업데이트 에러......");
-        e.printStackTrace();
+            log.info("수정 에러");
         }
     }
 }

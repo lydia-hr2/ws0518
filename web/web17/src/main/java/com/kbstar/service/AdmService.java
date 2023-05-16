@@ -12,16 +12,16 @@ import java.util.List;
 @Service
 @Slf4j
 public class AdmService implements KBService<String, Adm> {
+
     @Autowired
     AdmMapper mapper;
-
     /**
      * 등록 및 가입 진행
-     * argument: Object
-     * return: null
+     * argument : Object
+     * return : null
      *
      * @param adm
-     **/
+     */
     @Override
     public void register(Adm adm) throws Exception {
         mapper.insert(adm);

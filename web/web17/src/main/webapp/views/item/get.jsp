@@ -1,77 +1,69 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<style>
-    #img{
-        width:200px;
-    }
-</style>
 
 <script>
     item_get = {
-        init:function (){
-            $('#cart_btn').click(function (){
+        init: function () {
+            $(cart_btn).click(function () {
                 let cust_id = '${logincust.id}';
-                let item_id = ${gitem.id};  //ìˆ«ìë¼ì„œ ì‹±ê¸€ì»¤í…Œì´ì…˜ ì“°ì§€ ì•ŠëŠ”ë‹¤!
+                let item_id = ${gitem.id};
+                //single quotation ºÒÇÊ¿ä(integer type)
                 let cnt = $('#cnt').val();
                 $.ajax({
                     url:'/addcart',
-                    data:{cust_id:cust_id,item_id:item_id,cnt:cnt},
-                    success:function (){
+                    data: {cust_id:cust_id, item_id:item_id, cnt:cnt},
+                    success:function(){
                         $('#myModal').modal();
                     }
                 });
-
-                // ë³€ìˆ˜ì˜ ë“¤ì–´ ê°”ëŠ”ì§€ í™•ì¸ ì–¼ë
-                // alert(cust_id);
-                // alert(item_id);
-                // alert(cnt);
-
-               // $('#cart_form').attr({
-               //     method:'get', /*ì—¬ê¸°ì„œëŠ” getë°©ì‹ìœ¼ë¡œ ì¨ì•¼í•œë‹¤*/
-               //     action:'/item/addcart'
-               // });
-               //  $('#cart_form').submit();
+                //form Àü¼Û°ú ajax ÇüÅÂÀÇ Àü¼Û Â÷ÀÌ ÁÖÀÇ
+                //form: ´Ù¸¥ ÆäÀÌÁö ·Îµå·Î ÀÌ¾îÁü
+                //ajax: controller¿¡¼­ Àü´Ş¹Ş¾Æ °°Àº ÆäÀÌÁö¿¡¼­ ´Ù¸¥ °ªÀ» »Ñ·ÁÁÙ ¼ö ÀÕÀ½
+                //°æ¿ì¿¡ µû¶ó »ç¿ëÇÒ °Í.
+            //     $('#cart_form').attr({
+            //         method: 'post',
+            //         action: '/item/addcart'
+            //     });
+            //     $('#cart_form').submit();
             });
         }
     };
-    $(function (){
-
-    });
-    // í™”ë©´ì— ì ‘ì† ë˜ë©´ ë¡œê·¸ì¸í¼ ê°ì²´ì— ì´ë‹›ì„ ì¶œë ¥í•´ë¼
-    $(function (){
+    $(function () {
         item_get.init();
     });
+
+
 </script>
+
 
 <div class="col-sm-8 text-left">
     <div class="container">
         <h3>Item Info</h3>
-        <img id="img" src="/uimg/${gitem.imgname}">
+        <img src="/uimg/${gitem.imgname}">
         <h4>${gitem.id}</h4>
         <h4>${gitem.name}</h4>
         <h4>${gitem.price}</h4>
-
+        <h4>${gitem.rdate}</h4>
         <c:if test="${logincust !=null}">
-        <form id="cart_form" class="form-inline well col-sm-5">
-            <input type="hidden" name="cust_id" value="${logincust.id}">
-            <input type="hidden" name="item_id" value="${gitem.id}">
-            <div class="form-group">
-                <label class="control-label col-sm-3" for="cnt">Count: </label>
-                <input type="number" class="form-control" id="cnt" name="cnt" placeholder="Enter Count" >
-            </div>
-
-            <div class="btns">
-                <div class = "col-sm-offset-2 col-sm-5">
-                    <button type="button" id="cart_btn" class="btn btn-primary">CART</button>
+            <form id="cart_form" class="form-inline well">
+                <div class="row-content">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="cnt" type="number" class="form-control" name="cnt" placeholder="Enter Quantity">
+                    </div>
+                    <div class="form-group" style="margin-top: 10px; text-align: center;">
+                        <button type="button" id="cart_btn" class="btn btn-default">CART</button>
+                        <input type="hidden" name="cust_id" value="${logincust.id}">
+                        <input type="hidden" name="item_id" value="${gitem.id}">
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
         </c:if>
     </div>
 </div>
 
-<!-- My Modal -->
+
+<!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
 
@@ -79,10 +71,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
             </div>
             <div class="modal-body">
-                <a href="/item/allcart?id=${logincust.id}" class="btn btn-info" role="button">ì¥ë°”êµ¬ë‹ˆë¡œì´ë™</a>
-                <a href="/item/allpage" class="btn btn-info" role="button">ê³„ì†ìƒ¤í•‘</a>
+                <a href="/item/allcart?id=${logincust.id}" class="btn btn-info" role="button">GO TO CART</a>
+                <a href="/item/allpage" class="btn btn-info" role="button">CONTINUE</a>
             </div>
             <div class="modal-footer">
             </div>
@@ -91,4 +84,3 @@
     </div>
 </div>
 
-</div>

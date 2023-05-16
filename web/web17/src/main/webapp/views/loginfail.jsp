@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="col-sm-8 text-left">
     <div class="container">
-        <h3>로그인 실패</h3>
-        <h3>아이디 또는 패스워드가 틀림</h3>
-        <h3><a href="/login">Login Page</a></h3>
+        <h2>Log In Fail</h2>
+        <h3>���̵� �Ǵ� �н����尡 ��ġ���� �ʽ��ϴ�!</h3>
+        <h3><a href = "/login">LOG IN PAGE</a></h3>
     </div>
 </div>

@@ -10,12 +10,13 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class CFRCelebrityUtil {
-    public static Object getResult(String imgpath, String imgname) throws ParseException {
+    public static Object getResult(String imgpath, String imgname) throws Exception {
         String result = "";
 
+
         StringBuffer reqStr = new StringBuffer();
-        String clientId = "ipt0a6ffbn";//애플리케이션 클라이언트 아이디값";
-        String clientSecret = "wtvDbm4QbdlLZGRvXJQH2uwtpSAdrLse0Ah1bldc";//애플리케이션 클라이언트 시크릿값";
+        String clientId = "q6uipawxpf";//애플리케이션 클라이언트 아이디값";
+        String clientSecret = "bAIC5ebknxeA2owX0NzyTtmh8090EcuiZWF4hKdN";//애플리케이션 클라이언트 시크릿값";
 
         try {
             String paramName = "image"; // 파라미터명은 image로 지정
@@ -68,6 +69,7 @@ public class CFRCelebrityUtil {
                     response.append(inputLine);
                 }
                 br.close();
+
                 result = response.toString();
             } else {
                 System.out.println("error !!!");
@@ -75,8 +77,11 @@ public class CFRCelebrityUtil {
         } catch (Exception e) {
             System.out.println(e);
         }
+
         JSONParser jsonParser = new JSONParser();
         JSONObject obj = (JSONObject) jsonParser.parse(result);
         return obj;
     }
+
+
 }

@@ -1,13 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=euc-kr" pageEncoding="euc-kr" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
 <script>
     let pic = {
         myVideoStream:null,
-        init:function(){
+        init:function(interval){
             this.myVideoStream = document.querySelector('#myVideo');
-
+            // $('#cfr_btn').click(function(){
+            //     $('#cfr_form').attr({
+            //         'method':'post',
+            //         'action':'/cfrimpl'
+            //     });
+            //     $('#cfr_form').submit();
+            // });
         },
         getVideo:function(){
             navigator.getMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
@@ -58,6 +64,7 @@
                 pic.send();
             }, interval);
         }
+        //autoPic 버튼 클릭 시, 인터벌을 두고 사진을 찍어 전송
     };
     $(function(){
         pic.init();
@@ -72,12 +79,12 @@
     <input type=button value="get Pic" onclick="pic.takeSnapshot();">
     <input type=button value="send Pic" onclick="pic.send();"><br>
     <input type=button value="Auto Pic" onclick="pic.takeAuto(5000);">
-    <form id="cfr_form" action="/mycfr" method="get">
+    <form id="cfr_form" action = "/mycfr" method = "get">
         Image Name:<input type="text" name="imgname" id="imgname"><br>
-        <button id="cfr_btn">CFR</button>
+        <button type = "submit" id="cfr_btn">CFR</button>
     </form>
     <h2>${result.emotion}</h2>
     <h2>${result.pose}</h2>
-    <h2>${result.gender}</h2>
     <h2>${result.age}</h2>
+    <h2>${result.gender}</h2>
 </div>

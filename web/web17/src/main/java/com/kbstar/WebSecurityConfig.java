@@ -1,5 +1,5 @@
 package com.kbstar;
-/*패스워드 비밀화 만드는거, 다른써버에서도 접속 가능하게 만들어줌*/
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -14,12 +14,15 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    //패스워드 암호화 관련 부분
     @Bean
     public BCryptPasswordEncoder encodePWD() {
         return new BCryptPasswordEncoder();
     }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //cors 허용 관련 부분
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.addAllowedOrigin(CorsConfiguration.ALL);
         configuration.addAllowedMethod(CorsConfiguration.ALL);
@@ -27,6 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
 
+        //요청에 대한 허가 권한 관련 부분
         http.httpBasic()
                 .and().authorizeRequests()
                 .anyRequest().permitAll()

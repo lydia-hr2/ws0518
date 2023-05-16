@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="LOGS_DIR" value="c://project/logs" />
+    <property name="LOGS_DIR" value="c://project/logs"/>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <Pattern>[%d{MM-dd HH:mm:ss}]%-5level %logger{36} - %msg%n</Pattern>
+            <!--print log as below-->
             <!--<Pattern>[%d{MM-dd HH:mm:ss}][%thread] %-5level %logger{36} - %msg%n</Pattern>-->
+            <Pattern>[%d{MM-dd HH:mm:ss}]%-5level %logger{36} - %msg%n</Pattern>
+
         </layout>
     </appender>
 
@@ -22,7 +24,7 @@
             <maxHistory>30</maxHistory>
         </rollingPolicy>
     </appender>
-
+    <!--log for static/log -->
     <appender name="FILE2" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOGS_DIR}/custinfo.log</file>
         <encoder>
@@ -37,28 +39,28 @@
         </rollingPolicy>
     </appender>
 
-
-    <root level="INFO"> <!--실제 배포전에는 info를 Error로 변경할 것-->
-        <appender-ref ref="STDOUT" />
+    <!-- the level can be varied followed by development stages-->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <!--print as standard output / it might be printed as file-->
     </root>
 
     <logger name="org.springframework.web" level="DEBUG">
-        <appender-ref ref="STDOUT" />
-        <appender-ref ref="FILE" />
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
     </logger>
 
-    <!--CustController에서 발생된 로그는 FILE2 찍어라~-->
     <logger name="com.kbstar.controller.CustController" level="INFO">
-        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE2"/>
     </logger>
 
-    <!--OFF를 안쓰면 로그가 엄청 많이 나온다-->
     <logger name="jdbc" level="OFF" />
-    <logger name="jdbc.sqlonly" level="INFO" />
-    <logger name="jdbc.sqltiming" level="OFF" />
-    <logger name="jdbc.audit" level="OFF" />
-    <logger name="jdbc.resultset" level="OFF" />
-    <logger name="jdbc.resultsettable" level="INFO" />
-    <logger name="jdbc.connection" level="OFF" />
-
+	<logger name="jdbc.sqlonly" level="INFO" />
+	<logger name="jdbc.sqltiming" level="OFF" />
+	<logger name="jdbc.audit" level="OFF" />
+	<logger name="jdbc.resultset" level="OFF" />
+	<logger name="jdbc.resultsettable" level="INFO" />
+	<logger name="jdbc.connection" level="OFF" />
+    <!-- INFO(trace > debug > info > warn > error)  -->
+    <!-- trace: all ======> lighter =====> only error-->
 </configuration>

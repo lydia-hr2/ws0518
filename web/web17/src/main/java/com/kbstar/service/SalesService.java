@@ -9,13 +9,18 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 @Slf4j
+@Service
 public class SalesService implements KBService<String, Sales> {
-    @Autowired
+    /**
+     * 등록 및 가입 진행
+     * argument : Object
+     * return : null
+     *
+     * @param sales
+     */
+@Autowired
     SalesMapper mapper;
-
-
     @Override
     public void register(Sales sales) throws Exception {
         mapper.insert(sales);

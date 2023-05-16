@@ -1,73 +1,79 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <style>
     #map02 > #map{
-        width:800px;
-        height:400px;
-        border: 2px solid blue;
-        margin-top: 10px;
+        width: 400px;
+        height: 400px;
+        border: 2px solid lightpink;
     }
 </style>
 
 <script>
+
     let map02 = {
         map:null,
-        init:function (){
-           this.display();
-           $('#s_btn').click(function (){
-               map02.go(37.579617,126.977041);
-           });
-           $('#b_btn').click(function (){
-               map02.go(39.0581367,125.7682553);
-           });
-           $('#j_btn').click(function (){
-               map02.go(33.4853707,126.4815713);
-           });
+        init: function(){
+            this.display();
+            $('#s_btn').click(function(){
+                map02.go(37.5208119, 126.9278776);
+            });
+            $('#d_btn').click(function(){
+                map02.go(36.3171959, 127.4094206);
+            });
+            $('#j_btn').click(function(){
+                map02.go(33.243829, 126.5386304);
+            });
         },
-        display:function (){
+        display: function(){
             var mapContainer = document.querySelector('#map02 > #map');
             var mapOption = {
-                center: new kakao.maps.LatLng(37.5192199, 126.9271762), // 지도의 중심좌표
-                level: 3 // 지도의 확대 레벨
+                center: new kakao.maps.LatLng(37.5444568, 127.0572981), // 지도의 중심좌표
+                level: 5 // 지도의 확대 레벨
             };
             map = new kakao.maps.Map(mapContainer, mapOption);
-
             var mapTypeControl = new kakao.maps.MapTypeControl();
+
             map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
             var zoomControl = new kakao.maps.ZoomControl();
             map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
-            var markerPosition  = new kakao.maps.LatLng(37.5192199, 126.9271762);
+            var markerPosition  = new kakao.maps.LatLng(37.5444568, 127.0572981);
+
             var marker = new kakao.maps.Marker({
                 position: markerPosition
             });
+
             marker.setMap(map);
         },
-        go:function (lat,lng){
-            var moveLatLon = new kakao.maps.LatLng(lat,lng);
-            // 지도 중심을 부드럽게 이동시킵니다
-            // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+        go:function(lat, lng){
+            var moveLatLon = new kakao.maps.LatLng(lat, lng);
             map.panTo(moveLatLon);
-            var markerPosition  = new kakao.maps.LatLng(lat,lng);
+
+            var markerPosition  = new kakao.maps.LatLng(lat, lng);
+
             var marker = new kakao.maps.Marker({
                 position: markerPosition
             });
             marker.setMap(map);
+
         }
     };
-    $(function (){
+    $(function(){
         map02.init();
     })
 
 </script>
 
 <div class="col-sm-8 text-left">
-    <div class="container" id="map02">
-        <h3>MAP02</h3>
-        <button id="s_btn" type="button" class="btn btn-primary">SEOUL</button>
-        <button id="b_btn"type="button" class="btn btn-primary">BUSAN</button>
-        <button id="j_btn"type="button" class="btn btn-primary">JEJU</button>
-        <div id="map"></div>
+      <div class = "container" id = "map02">
+          <h3>MAP02</h3>
+          <button id = "s_btn" type="button" class="btn btn-default">Seoul</button>
+          <button id = "d_btn" type="button" class="btn btn-default">Daejeon</button>
+          <button id = "j_btn" type="button" class="btn btn-default">Jeju</button>
+          <div id = "map"></div>
+
     </div>
 </div>

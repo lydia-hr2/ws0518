@@ -16,103 +16,118 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+
+//import static com.sun.java.util.jar.pack.Utils.log;
 
 @Slf4j
 @Controller
-@RequestMapping("/item") // /cust를 넣음으으로 기본적으로 주소에 /cust가 셋팅됨
+@RequestMapping("/item")
+
 public class ItemController {
-    @Autowired
-    ItemService itemService;
+
+    Logger logger = LoggerFactory.getLogger(this.getClass().getSimpleName());
+
+    String dir = "item/";
+
     @Autowired
     CartService cartService;
-    String dir = "item/"; //폴더명을 변수로 넣기
 
-    //127.0.0.1/cust
+    //127.0.0.1/item
     @RequestMapping("")
-    public String main(Model model){
-        model.addAttribute("left",dir+"left");
-        model.addAttribute("center",dir+"center");
+    public String main(Model model) {
+        model.addAttribute("left", dir + "left");
+        model.addAttribute("center", dir + "center");
         return "index";
     }
 
     @RequestMapping("/add")
-    public String add(Model model){
-        model.addAttribute("left",dir+"left");
-        model.addAttribute("center",dir+"add");
+    public String add(Model model) {
+        model.addAttribute("left", dir + "left");
+        model.addAttribute("center", dir + "add");
         return "index";
     }
 
-    @RequestMapping("/get")
-    public String get(Model model,Integer id) throws Exception {
-        Item item = null;
-        item = itemService.get(id);
-        model.addAttribute("gitem",item);
-        model.addAttribute("left",dir+"left");
-        model.addAttribute("center",dir+"get");
-        return "index";
-    }
-
+    @Autowired
+    ItemService itemService;
     @RequestMapping("/all")
     public String all(Model model) throws Exception {
+
         List<Item> list = null;
+
         try {
             list = itemService.get();
+            for(Item obj:list){
+                log.info(obj.toString());
+            }
         } catch (Exception e) {
             throw new Exception("시스템 장애: ER0002");
+
         }
-        model.addAttribute("allitem",list);
-        model.addAttribute("left",dir+"left");
-        model.addAttribute("center",dir+"all");
+
+        model.addAttribute("allitem", list);
+        model.addAttribute("left", dir + "left");
+        model.addAttribute("center", dir + "all");
         return "index";
     }
 
     @RequestMapping("/allpage")
-    public String allpage(@RequestParam(required = false, defaultValue = "1") int pageNo,
-                          Model model) throws Exception {
+    public String allpage(@RequestParam(required = false, defaultValue = "1") int pageNo, Model model) throws Exception {
         PageInfo<Item> p;
         try {
             p = new PageInfo<>(itemService.getPage(pageNo), 5); // 5:하단 네비게이션 개수
         } catch (Exception e) {
-            throw new Exception("시스템 장애: ER0002");
+            throw new Exception("시스템 장애: ER0001");
         }
         model.addAttribute("target","item");
-        model.addAttribute("cpage",p);
 
+        model.addAttribute("cpage",p);
         model.addAttribute("left",dir+"left");
         model.addAttribute("center",dir+"allpage");
         return "index";
     }
 
+    @RequestMapping("/get")
+    public String get(Model model, Integer id) throws Exception{
+        Item item = null;
+        item = itemService.get(id);
+        model.addAttribute("gitem", item);
+        model.addAttribute("left", dir + "left");
+        model.addAttribute("center", dir + "get");
+        return "index";
+    }
+
     @RequestMapping("/allcart")
     public String allcart(Model model, String id) throws Exception {
+
         List<Cart> list = null;
+
         try {
-            list = cartService.getmycart(id);
+            list = cartService.getMyCart(id);
         } catch (Exception e) {
-            throw new Exception("시스템 장애: ER0003");
+            throw new Exception("시스템 장애: ER0002");
         }
+
         model.addAttribute("allcart", list);
         model.addAttribute("center", "cart");
         return "index";
     }
+
+
     @RequestMapping("/addcart")
-    public String addcart(Model model,Cart cart) throws Exception {
+    public String addcart(Model model, Cart cart) throws Exception {
         cartService.register(cart);
-//        model.addAttribute("center",dir+"cart");
         return "redirect:/item/allcart?id="+cart.getCust_id();
     }
 
     @RequestMapping("/delcart")
-    public String delcart(Model model, Integer id, HttpSession session) throws Exception {
+    public String delcart(Model model, Integer id,  HttpSession session) throws Exception {
         cartService.remove(id);
         if(session != null){
             Cust cust = (Cust) session.getAttribute("logincust");
             return "redirect:/item/allcart?id="+cust.getId();
         }
         return "redirect:/";
-
     }
-};
+
+}

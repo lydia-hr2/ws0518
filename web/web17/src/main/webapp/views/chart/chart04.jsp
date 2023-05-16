@@ -1,17 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <style>
     #container{
-        width:800px;
-        height:400px;
-        border: 2px solid blue;
+        width:950px;
+        height:500px;
+        border:2px solid lightpink;
     }
 </style>
 
 <script>
     let chart04 = {
-        init:function(){
+        init: function(){
             var defaultData = 'http://127.0.0.1/logs/custinfo.log';
             var urlInput = document.getElementById('fetchURL');
             var pollingCheckbox = document.getElementById('enablePolling');
@@ -51,21 +52,24 @@
 
             urlInput.value = defaultData;
 
+// We recreate instead of using chart update to make sure the loaded CSV
+// and such is completely gone.
             pollingCheckbox.onchange = urlInput.onchange = pollingInput.onchange = createChart;
 
+// Create the chart
             createChart();
 
         }
     };
 
-    $(function (){
+    $(function(){
         chart04.init();
     })
 
 </script>
 
 <div class="col-sm-8 text-left">
-    <div class="container">
+    <div class = "container">
         <h3>CHART04</h3>
         <div id="container"></div>
         <div class="ld-row">

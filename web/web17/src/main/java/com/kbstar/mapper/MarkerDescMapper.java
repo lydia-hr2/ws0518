@@ -1,5 +1,6 @@
 package com.kbstar.mapper;
 
+import com.kbstar.dto.Marker;
 import com.kbstar.dto.MarkerDesc;
 import com.kbstar.frame.KBMapper;
 import org.apache.ibatis.annotations.Mapper;
@@ -10,5 +11,5 @@ import java.util.List;
 @Repository
 @Mapper
 public interface MarkerDescMapper extends KBMapper<Integer, MarkerDesc> {
-    public List<MarkerDesc> getmarkerdesc(int id) throws Exception;
+    public List<MarkerDesc> getmarkerdesc(int marker_id) throws Exception;
 }

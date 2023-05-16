@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="col-sm-8 text-left">
     <div class="container">
-        <h3>Register OK</h3>
-        <h3>${rcust.name} К▀≤ М≥≤Л≤│М∙╘К▀┬К▀╓</h3>
+        <h2>Successfully registered</h2>
+        <h3>${rcust.name}╢т х╞©╣гу╢о╢ы.</h3>
     </div>
 </div>
