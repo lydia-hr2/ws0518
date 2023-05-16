@@ -2,6 +2,7 @@ package com.kbstar.service;
 
 
 import com.kbstar.dto.Review;
+import com.kbstar.dto.ReviewSearch;
 import com.kbstar.mapper.ReviewMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +40,9 @@ public class ReviewService implements ShopService<Integer, Review>{
     @Override
     public List<Review> get() throws Exception {
         return reviewMapper.selectall();
+    }
+
+    public List<Review> search(ReviewSearch rs) throws Exception {
+        return reviewMapper.search(rs);
     }
 }

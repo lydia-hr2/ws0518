@@ -11,8 +11,33 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Review List</h6>
+            <form action="/reviewsearch"id="search_form" name="search_form" class="form-inline well">
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="itemId">Product:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="itemId" class="form-control" id="itemId" placeholder="Enter itemId"
+                               value="${rs.itemId}"
+                        >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="rate">Rate: </label>
+                    <div class="col-sm-10">
+                        <input type="number" name="rate" class="form-control" id="rate" placeholder="Enter rate"
+                               value="${rs.rate}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-2">
+                        <button id="search_btn" type="submit" class="btn btn-info">Search</button>
+                        <%--                        폼과 폼 사이를 할 땐 submit--%>
+                    </div>
+                </div>
+            </form>
         </div>
+
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

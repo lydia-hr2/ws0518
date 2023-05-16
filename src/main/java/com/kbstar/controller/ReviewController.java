@@ -1,6 +1,7 @@
 package com.kbstar.controller;
 
 import com.kbstar.dto.Review;
+import com.kbstar.dto.ReviewSearch;
 import com.kbstar.service.ReviewService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 @Slf4j
@@ -23,7 +25,7 @@ public class ReviewController {
     private BCryptPasswordEncoder encoder;
     String dir = "/review";
 
-    @Valid
+
     @RequestMapping("/reviewimpl")
     public String reviewimpl(@Valid Review review, Model model, HttpSession session) throws Exception {
         try {
@@ -36,6 +38,25 @@ public class ReviewController {
         return "redirect:/";
     }
 
+    @RequestMapping("/reviewsearch")
+    public String reviewsearch(Model model, ReviewSearch rs) throws Exception {
+
+
+        log.info("================================"+rs.getItemId());
+        log.info("================================"+rs.getRate());
+
+        List<Review> list = null;
+        try {
+            list = reviewService.search(rs);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception("가입 오류");
+        }
+        model.addAttribute("rs", rs);
+        model.addAttribute("reveiwlist", list);
+        model.addAttribute("center", "reviewall");
+        return "index";
+    }
 
 
 }
