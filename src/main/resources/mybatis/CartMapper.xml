@@ -13,12 +13,12 @@
         WHEN MATCHED THEN
         UPDATE SET cnt = cnt+ #{cnt}
     </insert>
-    <select id="findByItemId" resultType="x.senior.cart.Cart">
+    <select id="findByItemId" resultType="Cart">
         SELECT *
         FROM Cart
         WHERE item_id = #{itemId}
     </select>
-    <select id="findByUserId" parameterType="int" resultType="x.senior.item.Item">
+    <select id="findByUserId" parameterType="int" resultType="Item">
         select CART.item_id as id
              , I.name
              , I.img
