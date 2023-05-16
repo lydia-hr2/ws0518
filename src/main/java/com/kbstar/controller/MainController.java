@@ -50,4 +50,10 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/review")
+    public String review(Model model) {
+        model.addAttribute("center","review");
+        return "index";
+    }
+
 }

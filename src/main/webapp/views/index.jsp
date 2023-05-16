@@ -102,10 +102,9 @@
                                     <li><a href="./shop-details.html">Shop Details</a></li>
                                     <li><a href="./shopping-cart.html">Shopping Cart</a></li>
                                     <li><a href="/checkout">Check Out</a></li>
-                                    <li><a href="./blog-details.jsp">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./blog.jsp">Blog</a></li>
+                            <li><a href="/review">Review</a></li>
                             <li><a href="/contact">Contacts</a></li>
                         </ul>
                     </nav>

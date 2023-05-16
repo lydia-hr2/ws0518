@@ -3,6 +3,7 @@ package com.kbstar.controller;
 import com.kbstar.service.CartService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,11 +14,11 @@ import java.util.Map;
 
 @RestController
 @Slf4j
-@RequiredArgsConstructor
 @RequestMapping("/cart")
 public class CartApiController {
 
-    private final CartService cartService;
+    @Autowired
+    CartService cartService;
 
     @PostMapping("/delete")
     public ResponseEntity<String> deleteItem(int id) {

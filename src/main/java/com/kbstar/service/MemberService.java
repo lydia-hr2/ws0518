@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import javax.validation.Valid;
 import java.util.List;
 
-@Valid
 @Service
 @Slf4j
 public class MemberService implements ShopService<String, Member>{
