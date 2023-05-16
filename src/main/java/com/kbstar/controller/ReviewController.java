@@ -53,7 +53,7 @@ public class ReviewController {
             throw new Exception("가입 오류");
         }
         model.addAttribute("rs", rs);
-        model.addAttribute("reveiwlist", list);
+        model.addAttribute("reviewlist", list);
         model.addAttribute("center", "reviewall");
         return "index";
     }
