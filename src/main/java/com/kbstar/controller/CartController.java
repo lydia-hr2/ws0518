@@ -24,7 +24,9 @@ public class CartController {
 
     @PostMapping("/add")
     public void addCart(int memberId, int itemId) {
+
         cartService.addCart(memberId, itemId);
+
     }
 
     /*

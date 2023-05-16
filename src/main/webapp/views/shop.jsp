@@ -23,6 +23,7 @@
     }
     $(function () {
         addCart.init();
+        rate.init();
     })
 </script>
 <!-- Breadcrumb Section Begin -->
@@ -244,13 +245,27 @@
 
                                     <h6>${c.name}</h6>
                                     <a id="add-cart" class="add-cart btn" role="button" aria-pressed="true" style="color:red;" data-item-id="${c.id}">+ Add To Cart</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
+
+                                        <%--                                    본 코드 starts--%>
+<%--                                     <div class="rating" id="rate" class="rate">--%>
+<%--                                        <i class="fa fa-star"></i>--%>
+<%--                                        <i class="fa fa-star-o"></i>--%>
+<%--                                    </div>--%>
+                                        <%--                                    본 코드 ends--%>
+
+                                    <c:forEach items="${rlist}" var="r">
+                                        <c:if test="${r.itemId == c.id}">
+                                        <div class="rating" id="rate" class="rate">
+                                            <c:forEach begin="1" end="${r.rate}">
+                                                <i class="fa fa-star"></i>
+                                            </c:forEach>
+                                            <c:forEach begin="${r.rate + 1}" end="5">
+                                                <i class="fa fa-star-o"></i>
+                                            </c:forEach>
+                                        </div>
+                                        </c:if>
+                                    </c:forEach>
+
                                     <h5><fmt:formatNumber value="${c.price}" type="number" pattern="$#,###,###" /> </h5>
                                     <div class="product__color__select">
                                         <label for="pc-4">

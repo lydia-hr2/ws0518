@@ -1,6 +1,7 @@
 package com.kbstar.controller;
 
 import com.kbstar.dto.Review;
+import com.kbstar.dto.ReviewRate;
 import com.kbstar.service.ReviewService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,8 @@ public class MainController {
 
 
     @RequestMapping("/shop")
-    public String shop(Model model) {
+    public String shop(Model model, Integer k) {
+
         model.addAttribute("center","shop");
         return "index";
     }

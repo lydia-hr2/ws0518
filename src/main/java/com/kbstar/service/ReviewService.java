@@ -2,6 +2,7 @@ package com.kbstar.service;
 
 
 import com.kbstar.dto.Review;
+import com.kbstar.dto.ReviewRate;
 import com.kbstar.dto.ReviewSearch;
 import com.kbstar.mapper.ReviewMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -44,5 +45,13 @@ public class ReviewService implements ShopService<Integer, Review>{
 
     public List<Review> search(ReviewSearch rs) throws Exception {
         return reviewMapper.search(rs);
+    }
+
+    public List<ReviewRate> rate(Integer k) throws Exception{
+        return reviewMapper.rate(k);
+    }
+
+    public List<ReviewRate> rateAll() throws Exception{
+        return reviewMapper.rateAll();
     }
 }
