@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-option">
         <div class="container">

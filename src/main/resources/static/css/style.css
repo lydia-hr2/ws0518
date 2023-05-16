@@ -33,8 +33,11 @@
 html,
 body {
 	height: 100%;
-	font-family: "Nunito Sans", sans-serif;
-	-webkit-font-smoothing: antialiased;
+	font-family:  Helvetica,
+	'맑은 고딕', 'malgun gothic',
+	'Apple SD Gothic Neo', 'Apple SD 산돌고딕 Neo',
+	'Microsoft NeoGothic',
+	'Droid sans', sans-serif;
 }
 
 h1,

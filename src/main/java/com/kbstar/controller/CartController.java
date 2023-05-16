@@ -23,8 +23,8 @@ public class CartController {
 
 
     @PostMapping("/add")
-    public void addCart(int userId, int itemId) {
-        cartService.addCart(userId, itemId);
+    public void addCart(int memberId, int itemId) {
+        cartService.addCart(memberId, itemId);
     }
 
     /*
@@ -32,9 +32,9 @@ public class CartController {
         결제가 완료되고 나서는 해당 유저의 장바구니를 삭제한다
      */
 
-    @GetMapping("/{userId}")
-    public String myCart(@PathVariable int userId, Model model) {
-        List<Item> myCart = cartService.myCart(userId);
+    @GetMapping("/{memberId}")
+    public String myCart(@PathVariable int memberId, Model model) {
+        List<Item> myCart = cartService.myCart(memberId);
         model.addAttribute("myCart", myCart);
         model.addAttribute("center", "shopping-cart");
         return "index";

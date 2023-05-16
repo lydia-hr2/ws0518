@@ -12,15 +12,15 @@ import java.util.List;
 public interface CartMapper {
     void addCart(Cart cart);
 
-    List<Item> findByUserId(int userId);
+    List<Item> findByUserId(int memberId);
 
     List<Cart> findByItemId(int itemId);
 
-    void increaseCnt(int userId, int itemId);
+    void increaseCnt(int memberId, int itemId);
 
     void deleteItem(int id);
 
-    void deleteCart(int userId);
+    void deleteCart(int memberId);
 
 
 }

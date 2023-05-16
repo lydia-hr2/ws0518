@@ -18,18 +18,18 @@ public class CartService {
 
     private final CartMapper cartMapper;
 
-    public void addCart(int userId, int itemId) {
-        Cart cart = new Cart(userId, itemId, 1);
+    public void addCart(int memberId, int itemId) {
+        Cart cart = new Cart(memberId, itemId, 1);
         List<Cart> byItemId = cartMapper.findByItemId(itemId);
-        if (byItemId.stream().filter(cart1 -> cart1.getUserId() == userId).findAny().isEmpty()) {
+        if (byItemId.stream().filter(cart1 -> cart1.getMemberId() == memberId).findAny().isEmpty()) {
             cartMapper.addCart(cart);
         } else {
-            cartMapper.increaseCnt(userId, itemId);
+            cartMapper.increaseCnt(memberId, itemId);
         }
     }
 
-    public List<Item> myCart(int userId) {
-        return cartMapper.findByUserId(userId);
+    public List<Item> myCart(int memberId) {
+        return cartMapper.findByUserId(memberId);
     }
 
     public void deleteItem(int id) {
@@ -41,9 +41,9 @@ public class CartService {
 //        cartMapper.decreaseItem(id);
     }
 
-    public Map<String, Integer> calculate(int userId) {
+    public Map<String, Integer> calculate(int memberId) {
         Map<String, Integer> calMap = new HashMap<>();
-        List<Item> cartList = cartMapper.findByUserId(userId);
+        List<Item> cartList = cartMapper.findByUserId(memberId);
         int cnt = 0;
         int price = 0;
         for (Item cart : cartList) {
@@ -55,8 +55,8 @@ public class CartService {
         return calMap;
     }
 
-    public void deleteCart(int userId) {
-        cartMapper.deleteCart(userId);
+    public void deleteCart(int memberId) {
+        cartMapper.deleteCart(memberId);
     }
 
 }

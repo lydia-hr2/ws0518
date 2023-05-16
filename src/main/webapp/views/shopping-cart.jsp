@@ -103,7 +103,7 @@
                                     <tr id="cart${cart.id}">
                                         <td class="product__cart__item">
                                             <div class="product__cart__item__pic">
-                                                <img src="${cart.img}" alt="" style="width: 90px; height: 90px">
+                                                <img src="/uimg/${cart.img}" alt="" style="width: 90px; height: 90px">
                                             </div>
                                             <div class="product__cart__item__text">
                                                 <h6>${cart.name}</h6>
