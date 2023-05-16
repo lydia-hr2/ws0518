@@ -104,7 +104,12 @@
                                     <li><a href="/checkout">Check Out</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/review">Review</a></li>
+                            <li><a href="#">Review</a>
+                                <ul class="dropdown">
+                                    <li><a href="/reviewall">Review List</a></li>
+                                    <li><a href="/review">Write a Review</a></li>
+                                </ul>
+                            </li>
                             <li><a href="/contact">Contacts</a></li>
                         </ul>
                     </nav>
