@@ -103,15 +103,15 @@
         <div class="row">
             <div class="col-lg-3 col-md-3">
                 <div class="header__logo">
-                    <a href="./index.jsp"><img src="/img/logo.png" alt=""></a>
+                    <a href="/"><img src="/img/logo.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <nav class="header__menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="/shop">Shop</a></li>
-                        <li><a href="#">Pages</a>
+                        <li class="active"><a href="/">홈</a></li>
+                        <li><a href="/shop">쇼핑</a></li>
+                        <li><a href="#">페이지</a>
                             <ul class="dropdown">
                                 <li><a href="/about">About Us</a></li>
                                 <li><a href="/shop">Shop Details</a></li>

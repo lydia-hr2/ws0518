@@ -270,16 +270,16 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="product__pagination">
+                        <div class="product__pagination m-lg-5" >
                             <ul class="pagination">
                                 <c:choose>
                                     <c:when test="${cpage.getPrePage() != 0}">
-                                        <li>
+                                        <li class="mx-5">
                                             <a href="/shop?pageNo=${cpage.getPrePage()}">Previous</a>
                                         </li>
                                     </c:when>
                                     <c:otherwise>
-                                        <li class="disabled">
+                                        <li class="disabled mx-5">
                                             <a href="#">Previous</a>
                                         </li>
                                     </c:otherwise>
@@ -288,12 +288,12 @@
                                 <c:forEach begin="${cpage.getNavigateFirstPage() }" end="${cpage.getNavigateLastPage() }" var="page">
                                     <c:choose>
                                         <c:when test="${cpage.getPageNum() == page}">
-                                            <li class="active">
+                                            <li class="active mx-5">
                                                 <a href="/shop?pageNo=${page}">${page }</a>
                                             </li>
                                         </c:when>
                                         <c:otherwise>
-                                            <li>
+                                            <li class="mx-5">
                                                 <a href="/shop?pageNo=${page}">${page }</a>
                                             </li>
                                         </c:otherwise>

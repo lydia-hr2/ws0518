@@ -65,9 +65,7 @@ public class MemberController {
             e.printStackTrace();
             throw new RuntimeException("시스템 장애 잠시 후 다시 로그인 하세요.");
         }
-        System.out.println("로그인 세션 확인 = " + session.getAttribute("loginmember"));
-        model.addAttribute("center", nextPage);
-        return "index";
+        return "redirect:/shop";
     }
 
 }

@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Setter
 public class Order {
     private int id;
-    private int userId;
+    private int memberId;
     private int itemId;
     private int price;
     private LocalDateTime rdate;
@@ -24,7 +24,16 @@ public class Order {
     private int cnt;
     private String itemName;
 
-    public void setId(int id) {
-        this.id = id;
+    public Order(int memberId, int itemId, int price, LocalDateTime rdate, String name, String zipcode, String addr, String tel, int cnt, String itemName) {
+        this.memberId = memberId;
+        this.itemId = itemId;
+        this.price = price;
+        this.rdate = rdate;
+        this.name = name;
+        this.zipcode = zipcode;
+        this.addr = addr;
+        this.tel = tel;
+        this.cnt = cnt;
+        this.itemName = itemName;
     }
 }
