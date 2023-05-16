@@ -120,8 +120,8 @@
                                 <li><a href="/blog">Blog Details</a></li>
                             </ul>
                         </li>
-                        <li><a href="/reviewall">Review</a></li>
-                        <li><a href="/contact">Contacts</a></li>
+                        <li><a href="/reviewall">후기</a></li>
+                        <li><a href="/contact">문의처</a></li>
                     </ul>
                 </nav>
             </div>
