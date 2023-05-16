@@ -111,13 +111,14 @@
                     <ul>
                         <li class="active"><a href="/">홈</a></li>
                         <li><a href="/shop">쇼핑</a></li>
-                        <li><a href="#">페이지</a>
+                        <li><a href="#">메뉴</a>
                             <ul class="dropdown">
-                                <li><a href="/about">About Us</a></li>
-                                <li><a href="/shop">Shop Details</a></li>
-                                <li><a href="/cart">Shopping Cart</a></li>
-                                <li><a href="/checkout">Check Out</a></li>
-                                <li><a href="/blog">Blog Details</a></li>
+                                <li><a href="/about">회사 정보</a></li>
+                                <li><a href="/shop">쇼핑</a></li>
+                                <li><a href="/cart/${loginmember.id}">장바구니</a></li>
+                                <li><a href="/order/${loginmember.id}">주문</a></li>
+                                <li><a href="/order/confirm/${loginmember.id}">주문내역</a></li>
+                                <li><a href="/blog">블로그</a></li>
                             </ul>
                         </li>
                         <li><a href="/reviewall">후기</a></li>
