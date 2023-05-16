@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3cdad9ac-bcf2-4664-a6b7-3e3b4f6e80ea" name="Changes" comment="0516project_hyerim">
+      <change afterPath="$PROJECT_DIR$/../clone0516/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/admin/src/main/java/com/kbstar/ScheduleConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/admin/src/main/java/com/kbstar/service/ChartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/Clone0511Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/CustomErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/controller/CartApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/controller/ReviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/dto/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/dto/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/dto/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/dto/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/dto/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/dto/ReviewSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/exception/ChatException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/exception/ContentException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/exception/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/exception/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/exception/FileException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/exception/ItemException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/exception/UserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/exception/handler/CustomExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/frame/ShopMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/mapper/CartMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/mapper/ItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/mapper/MemberMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/mapper/ReviewMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/service/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/service/ReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/service/ShopService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/java/com/kbstar/util/FileUploadUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/mybatis/CartMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/mybatis/ItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/mybatis/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/mybatis/membermapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/mybatis/reviewmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/css/elegant-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/css/faq.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/css/nice-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/css/slicknav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/fonts/ElegantIcons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/fonts/ElegantIcons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/fonts/ElegantIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/fonts/ElegantIcons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/about/about-us.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/about/team-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/about/team-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/about/team-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/about/team-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/about/testimonial-author.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/about/testimonial-pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/banner/banner-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/banner/banner-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/banner/banner-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/blog-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/blog-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/blog-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/blog-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/blog-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/blog-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/blog-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/blog-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/blog-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/details/blog-author.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/blog/details/blog-details.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/breadcrumb-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/clients/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/clients/client-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/clients/client-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/clients/client-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/clients/client-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/clients/client-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/clients/client-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/clients/client-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/footer-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/hero/hero-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/hero/hero-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/icon/calendar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/icon/cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/icon/compare.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/icon/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/icon/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/instagram/instagram-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/instagram/instagram-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/instagram/instagram-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/instagram/instagram-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/instagram/instagram-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/instagram/instagram-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/payment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product-sale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/product/product-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shop-details/details-payment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shop-details/product-big-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shop-details/product-big-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shop-details/product-big-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shop-details/product-big.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shop-details/thumb-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shop-details/thumb-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shop-details/thumb-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shop-details/thumb-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shopping-cart/cart-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shopping-cart/cart-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shopping-cart/cart-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/img/shopping-cart/cart-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/js/jquery.countdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/js/jquery.nice-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/js/jquery.nicescroll.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/js/jquery.slicknav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/js/mixitup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/resources/static/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/about.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/blog-details.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/center.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/checkout.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/contact.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/exception.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/faq.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/loginfail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/loginok.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/review.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/reviewall.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/shop-details.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/shop.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/shopping-cart.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/main/webapp/views/signin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/test/java/com/kbstar/Clone0511ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/test/java/com/kbstar/member/DeleteAllTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/test/java/com/kbstar/member/InsertTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/test/java/com/kbstar/member/SelectOneTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/test/java/com/kbstar/member/SelectTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clone0516/src/test/java/com/kbstar/review/InsertTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/sonarlint/issuestore/1/8/184436eb1c5554494e268105d8b1858eed2b1fca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/sonarlint/issuestore/2/0/2050cd401d0b3f336977ab27efd8d27674a03a60" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/sonarlint/securityhotspotstore/1/8/184436eb1c5554494e268105d8b1858eed2b1fca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/sonarlint/securityhotspotstore/2/0/2050cd401d0b3f336977ab27efd8d27674a03a60" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/CustomErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/Ws0511Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/dto/Adm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/dto/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/dto/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/dto/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/dto/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/frame/KBMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/frame/KBService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/mapper/AdmMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/mapper/CartMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/mapper/ItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/mapper/MemberMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/service/AdmService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/service/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/java/com/kbstar/util/FileUploadUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/mybatis/ItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/mybatis/MemberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/mybatis/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/mybatis/admmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/mybatis/cartmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/static/assets/demo/chart-area-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/static/assets/demo/chart-bar-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/static/assets/demo/chart-pie-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/static/assets/demo/datatables-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/static/assets/img/error-404-monochrome.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/static/js/datatables-simple-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/resources/static/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/401.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/500.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/charts.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/error/error_page1.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/layout-sidenav-light.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/layout-static.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/loginfail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/loginok.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/member/add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/member/all.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/member/detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/password.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/productDetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/registerProduct.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/sumcart.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/tables.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/main/webapp/views/updateProduct.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/test/java/com/kbstar/Ws0511ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/src/test/java/com/kbstar/cart/CartSumTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/CustomErrorController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/ServletInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/WebMvcConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/WebSecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/Ws0511Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/controller/ItemController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/controller/MainController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/controller/MemberController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/controller/OrderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/dto/Adm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/dto/Cart.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/dto/Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/dto/Member.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/dto/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/frame/KBMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/frame/KBService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/mapper/AdmMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/mapper/CartMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/mapper/ItemMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/mapper/MemberMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/mapper/OrderMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/service/AdmService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/service/CartService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/service/ItemService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/service/MemberService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/service/OrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/com/kbstar/util/FileUploadUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/mybatis/ItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/mybatis/MemberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/mybatis/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/mybatis/admmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/mybatis/cartmapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/static/assets/demo/chart-area-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/static/assets/demo/chart-bar-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/static/assets/demo/chart-pie-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/static/assets/demo/datatables-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/static/assets/img/error-404-monochrome.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/static/js/datatables-simple-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/classes/static/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/test-classes/com/kbstar/Ws0511ApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ws/ws0516/target/test-classes/com/kbstar/cart/CartSumTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2PrYliOOot3d88xN5CoyISSUpzi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/spring/clone0516",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "f9707bfdb9abb9c11794a254b9daa521",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\spring\clone0516\src\main\resources\static\css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="clone0511" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="clone0511" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Clone0516Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="clone0516" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kbstar.Clone0516Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kbstar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Clone0516Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\hrshi\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3cdad9ac-bcf2-4664-a6b7-3e3b4f6e80ea" name="Changes" comment="" />
+      <created>1684216821188</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684216821188</updated>
+      <workItem from="1684216822114" duration="716000" />
+      <workItem from="1684217562466" duration="7134000" />
+      <workItem from="1684225059052" duration="1339000" />
+    </task>
+    <task id="LOCAL-00001" summary="0516project_hyerim">
+      <created>1684224478068</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684224478068</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="0516project_hyerim" />
+    <option name="LAST_COMMIT_MESSAGE" value="0516project_hyerim" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

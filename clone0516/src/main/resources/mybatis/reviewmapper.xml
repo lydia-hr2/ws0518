@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kbstar.mapper.ReviewMapper">
+
+
+    <select id="search" parameterType="reviewSearch" resultType="review">
+        SELECT * FROM review
+        <where>
+            <if test="itemId != null and itemId != 0 ">
+                itemId = #{itemId}
+            </if>
+            <if test="rate != null and rate != 0 ">
+                AND rate &gt; #{rate}
+            </if>
+        </where>
+    </select>
+    <insert id="insert" parameterType="review">
+        INSERT INTO review
+        VALUES (review_seq.NEXTVAL,#{userId},#{itemId},#{title},#{review},#{rate})
+    </insert>
+
+    <select id="select" parameterType="Integer" resultType="review">
+        SELECT * FROM review WHERE id=#{id}
+    </select>
+
+    <select id="selectall" resultType="review">
+        SELECT * FROM review
+    </select>
+
+    <delete id="delete" parameterType="String">
+        DELETE FROM member WHERE member_id=#{memberId}
+    </delete>
+
+</mapper>

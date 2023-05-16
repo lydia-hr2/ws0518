@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7fc11ea4-d56e-46ae-89e6-c7d7e579772a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/CustomErrorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/Web17Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/Web17Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/AjaxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/AjaxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/AjaxImplController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/AjaxImplController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ChartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ChartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ChartImplController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ChartImplController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/CustController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/CustController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/JSPController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/JSPController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/MapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/NcpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/controller/NcpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Cust.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Cust.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Marker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Marker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/MarkerDesc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/MarkerDesc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Ncp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Ncp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Sales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/dto/Sales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/frame/KBMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/frame/KBMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/CartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/CartMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/CustMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/CustMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/ItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/ItemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/MarkerDescMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/MarkerDescMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/MarkerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/mapper/MarkerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/AdmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/AdmService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/CustService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/CustService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/MarkerDescService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/MarkerDescService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/MarkerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/MarkerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/service/SalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/service/SalesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/util/CFRcelebrityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/util/CFRcelebrityUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/util/CFRfaceUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/util/CFRfaceUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/util/OCRutil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kbstar/util/WeatherUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kbstar/util/WeatherUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/message.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/message.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/message_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/message_en_US.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/message_ko_KR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/message_ko_KR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/admmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/admmapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/cartmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/cartmapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/custmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/custmapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/itemmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/itemmapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/markerdescmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/markerdescmapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/markermapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/markermapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/salesmapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/salesmapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index0421.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index0421.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/ajax/ajax01.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/ajax/ajax01.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/ajax/ajax02.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/ajax/ajax02.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/ajax/ajax03.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/ajax/ajax03.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/ajax/ajax04.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/ajax/ajax04.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/ajax/ajax05.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/ajax/ajax05.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/ajax/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/ajax/center.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/ajax/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/ajax/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/center.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cfr1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cfr1.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cfr2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cfr2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/chart/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/chart/center.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/chart/chart01.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/chart/chart01.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/chart/chart02.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/chart/chart02.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/chart/chart03.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/chart/chart03.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/chart/chart04.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/chart/chart04.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/chart/chart05.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/chart/chart05.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/chart/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/chart/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cust/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cust/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cust/all.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cust/all.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cust/allpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cust/allpage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cust/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cust/center.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cust/get.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cust/get.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cust/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cust/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/custinfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/custinfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/error/error_page1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/error/error_page1.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/all.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/all.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/allpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/allpage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/center.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/get.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/get.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/item/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/item/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/jsp/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/jsp/center.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/jsp/jsp01.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/jsp/jsp01.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/jsp/jsp02.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/jsp/jsp02.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/jsp/jsp03.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/jsp/jsp03.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/jsp/jsp04.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/jsp/jsp04.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/jsp/jsp05.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/jsp/jsp05.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/jsp/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/jsp/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/loginfail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/loginfail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/loginok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/loginok.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/map/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/map/center.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/map/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/map/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/map/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/map/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/map/map01.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/map/map01.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/map/map02.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/map/map02.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/map/map03.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/map/map03.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/map/map04.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/map/map04.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/map/map05.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/map/map05.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/ocr1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/ocr2.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/pic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/pic.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/registerok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/registerok.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/websocket.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/websocket.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/DeleteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/DeleteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/InsertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/InsertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/SelectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/SelectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/UpdateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/adm/UpdateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/DeleteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/DeleteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/InsertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/InsertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/SelectOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/SelectOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/SelectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/SelectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/UpdateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cart/UpdateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/DeleteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/DeleteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/InsertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/InsertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/SelectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/SelectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/UpdateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/cust/UpdateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/item/DeleteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/DeleteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/item/InsertTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/item/SelectOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/SelectOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/item/SelectPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/SelectPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/item/SelectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/SelectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/item/UpdateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/item/UpdateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/DeleteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/DeleteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/InsertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/InsertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/SelectLocTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/SelectLocTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/SelectOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/SelectOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/SelectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/SelectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/UpdateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/marker/UpdateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/markerdesc/InsertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/markerdesc/InsertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/markerdesc/SelectDescTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/markerdesc/SelectDescTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/ncp/OCRTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/sales/InsertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/sales/InsertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/sales/SelectAllTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kbstar/weather/WeatherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kbstar/weather/WeatherTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2PoorpnKbTlbyF8wLlpWvzxK0jt" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/spring/web/web17",
+    "settings.editor.selected.configurable": "File.Encoding"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Web17Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kbstar.Web17Application" />
+      <module name="web17" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kbstar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Web17Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7fc11ea4-d56e-46ae-89e6-c7d7e579772a" name="Changes" comment="" />
+      <created>1684132998758</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684132998758</updated>
+    </task>
+    <servers />
+  </component>
+</project>
