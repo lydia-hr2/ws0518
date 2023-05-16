@@ -35,7 +35,7 @@
 <body>
 <script>
     $(function () {
-        $('#logout').on("click", () => {swal("로그아웃 하시겠습니까"); location.href = "/logout"});
+        $('#logout').on("click", () => {location.href = "/logout"});
     })
 </script>
 <!-- Page Preloder -->
@@ -113,15 +113,18 @@
                         <li><a href="/shop">쇼핑</a></li>
                         <li><a href="#">페이지</a>
                             <ul class="dropdown">
-                                <li><a href="/about">About Us</a></li>
-                                <li><a href="/shop">Shop Details</a></li>
-                                <li><a href="/cart">Shopping Cart</a></li>
-                                <li><a href="/checkout">Check Out</a></li>
-                                <li><a href="/blog">Blog Details</a></li>
+                                <li><a href="/about">회사소개</a></li>
+                                <li><a href="/shop">상품</a></li>
+                                <c:if test="${loginmember != null}">
+                                    <li><a href="/cart/${loginmember.id}">장바구니</a></li>
+                                    <li><a href="/order/${loginmember.id}">주문</a></li>
+                                    <li><a href="/order/confirm/${loginmember.id}">주문내역</a></li>
+                                </c:if>
+                                <li><a href="/blog">블로그</a></li>
                             </ul>
                         </li>
-                        <li><a href="/reviewall">Review</a></li>
-                        <li><a href="/contact">Contacts</a></li>
+                        <li><a href="/reviewall">리뷰</a></li>
+                        <li><a href="/contact">문의 및 연락</a></li>
                     </ul>
                 </nav>
             </div>
@@ -129,8 +132,11 @@
                 <div class="header__nav__option">
                     <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
                     <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                    <a href="/cart/${loginmember.id}"><img src="img/icon/cart.png" alt="">
+                    <a href="/cart/${loginmember.id}"><img src="img/icon/cart.png" alt="" style="color:pink">
                     </a>
+                    <c:if test="${loginmemeber != null}">
+                        <a href="#">${loginmember.name}님</a>
+                    </c:if>
                 </div>
             </div>
         </div>

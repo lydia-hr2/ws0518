@@ -32,9 +32,9 @@ public class CartService {
         return cartMapper.findByUserId(memberId);
     }
 
-    public void deleteItem(int id) {
+    public void deleteItem(int memberId, int itemId) {
         log.info("===========아이템 삭제 서비스============");
-        cartMapper.deleteItem(id);
+        cartMapper.deleteItem(memberId, itemId);
     }
 
     public void decreaseItem(int id) {

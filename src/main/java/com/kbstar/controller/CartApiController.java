@@ -21,15 +21,15 @@ public class CartApiController {
     CartService cartService;
 
     @PostMapping("/delete")
-    public ResponseEntity<String> deleteItem(int id) {
-        log.info("===========아이템 삭제 컨트롤러============{}", id);
-        cartService.deleteItem(id);
+    public ResponseEntity<String> deleteItem(int memberId, int itemId) {
+        cartService.deleteItem(memberId, itemId);
         return ResponseEntity.ok().body("item delete complete");
     }
 
     @GetMapping("/info")
     public ResponseEntity<Map<String, Integer>> infoItem(int id) {
         Map<String, Integer> result = cartService.calculate(id);
+        System.out.println("result ============== " + result);
         return ResponseEntity.ok().body(result);
     }
 

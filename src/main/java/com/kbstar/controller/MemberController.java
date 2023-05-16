@@ -1,6 +1,8 @@
 package com.kbstar.controller;
 
 import com.kbstar.dto.Member;
+import com.kbstar.exception.ErrorCode;
+import com.kbstar.exception.UserException;
 import com.kbstar.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,17 +28,18 @@ public class MemberController {
     @Valid
     @RequestMapping("/signinimpl")
     public String signinimpl(@Valid Member member, Model model, HttpSession session) throws Exception {
+        Member signinMember = null;
         try {
             member.setPassword(encoder.encode(member.getPassword()));
             memberService.register(member);
+            signinMember = memberService.get(member.getMemberId());
             session.setMaxInactiveInterval(100000);
-            session.setAttribute("loginmember",member);
+            session.setAttribute("loginmember",signinMember);
+            return "redirect:/";
         } catch (Exception e) {
             e.printStackTrace();
-            throw new Exception("가입 오류");
+            throw new UserException(ErrorCode.SENIOR_NOT_FOUND);
         }
-        model.addAttribute("rmember", member);
-        return "redirect:/";
     }
 
     @GetMapping("/login?logout")

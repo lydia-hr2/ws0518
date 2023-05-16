@@ -42,7 +42,7 @@
                             </div>
                             <div class="checkout__input">
                                 <p>Address<span>*</span></p>
-                                <input type="text" placeholder="Street Address" class="checkout__input__add" id="addr">
+                                <input type="text" placeholder="Street Address" class="checkout__input__add" name="addr">
                             </div>
                             <div class="checkout__input">
                                 <p>Postcode / ZIP<span>*</span></p>

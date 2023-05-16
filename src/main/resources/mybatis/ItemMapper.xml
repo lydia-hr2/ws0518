@@ -7,6 +7,7 @@
         SELECT *
         FROM item
         WHERE id = #{id}
+        ORDER BY id ASC
     </select>
     <select id="getAllItems" resultType="Item">
         SELECT *

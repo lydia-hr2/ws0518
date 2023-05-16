@@ -28,15 +28,15 @@
     }
     let deleteItem = {
         init : function () {
-            $('#delete_btn').on('click', (e) => {
-                let cartId = $(e.currentTarget).data('item-id');
-                e.preventDefault();
+            $(document).on('click', '#delete_btn', function(e){
+                let itemId = $(e.currentTarget).data('item-id');
+                let memberId = ${loginmember.id};
                 $.ajax({
                     method: 'post',
                     url: '/cart/delete',
-                    data: {id: cartId}
+                    data: {itemId: itemId, memberId: memberId}
                 }).done(() => {
-                    $('#cart' + cartId).remove();
+                    $('#cart' + itemId).remove();
                     $.ajax({
                         method : 'get',
                         url : '/cart/info',

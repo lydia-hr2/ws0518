@@ -5,6 +5,8 @@ import com.kbstar.mapper.OrderMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class OrderService {
@@ -15,4 +17,7 @@ public class OrderService {
         mapper.insert(order);
     }
 
+    public List<Order> getOrder(int memberId) {
+        return mapper.getOrder(memberId);
+    }
 }

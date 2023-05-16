@@ -11,6 +11,7 @@
                 console.log("확인");
                 let itemId = $(e.currentTarget).data('item-id');
                 let memberId = ${loginmember.id};
+                console.log(memberId);
                 $.ajax({
                     method:'POST',
                     url: '/cart/add',
