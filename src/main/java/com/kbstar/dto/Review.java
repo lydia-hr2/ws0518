@@ -14,15 +14,17 @@ import java.util.Date;
 @ToString
 public class Review {
     private int id;
-    @NotEmpty
-    private String userId;
-    @NotEmpty
-    private String itemId;
-    @NotEmpty
+    private int userId;
+    private int itemId;
     private String title;
-    @NotEmpty
     private String review;
-    @NotEmpty
     private int rate;
 
+    public Review(int userId, int itemId, String title, String review, int rate) {
+        this.userId = userId;
+        this.itemId = itemId;
+        this.title = title;
+        this.review = review;
+        this.rate = rate;
+    }
 }

@@ -3,56 +3,29 @@
     <section class="blog-hero spad">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-9 text-center">
+                <div class="col-lg-10 text-center">
                     <div class="blog__hero__text">
-                        <h2>Leave a review and get 5% off coupon for next purchase!</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Blog Details Hero End -->
-
-    <!-- Blog Details Section Begin -->
-    <section class="blog-details spad">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-12">
-                    <div class="blog__details__pic">
-                        <img src="img/blog/details/blog-details.jpg" alt="">
-                    </div>
-                    <div class="blog__details__share">
-                        <span>share</span>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a></li>
-                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="blog__details__content">
+                        <h2>Review Form</h2>
                         <div class="blog__details__comment">
-                            <h4>Leave A Review</h4>
                             <form action="/reviewimpl" method="post" name="review_form" id="review_form">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4">
-                                        <input type="text" placeholder="userId" id="userId" name="userId">
+                                        <input type="text" placeholder="userId(Number..)" id="userId" name="userId">
                                     </div>
                                     <div class="col-lg-4 col-md-4">
-                                        <input type="text" placeholder="itemId" id="itemId" name="itemId">
+                                        <input type="text" placeholder="itemId(Number..)" id="itemId" name="itemId">
                                     </div>
-                                    <div class="col-lg-4 col-md-4">
+                                    <div class="col-lg-8 col-md-8">
                                         <input type="text" placeholder="title" id="title" name="title">
                                     </div>
-                                    <div class="col-lg-12 text-center">
-                                        <input type="text" placeholder="review" id="review" name="review"></input>
+                                    <div class="col-lg-8 text-center">
+                                        <textarea type="text" placeholder="review" id="review" name="review"></textarea>
                                     </div>
+                                    </br>
                                     <div class="col-lg-4 col-md-4">
-                                        <input type="number" placeholder="rate" id="rate" name="rate">
+                                        <input type="number" placeholder="Rate from 1 to 10" id="rate" name="rate">
                                     </div>
-                                    <button type="submit" class="site-btn">Post Review</button>
+                                    <button type="submit" class="review_btn">Post Review</button>
                                 </div>
                             </form>
                         </div>
@@ -61,4 +34,4 @@
             </div>
         </div>
     </section>
-    <!-- Blog Details Section End -->
+    <!-- Blog Details Hero End -->
