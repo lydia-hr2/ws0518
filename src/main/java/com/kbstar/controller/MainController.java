@@ -23,6 +23,12 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/404")
+    public String errorPage(Model model) {
+        model.addAttribute("center", "404");
+        return "index";
+    }
+
 
     @RequestMapping("/shop")
     public String shop(Model model, Integer k) {
