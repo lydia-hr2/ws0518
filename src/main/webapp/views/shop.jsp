@@ -2,6 +2,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<style>
+    .button-container {
+        display: flex;
+    }
+</style>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script>
@@ -11,6 +17,7 @@
                 console.log("확인");
                 let itemId = $(e.currentTarget).data('item-id');
                 let memberId = ${loginmember.id};
+                console.log(memberId);
                 $.ajax({
                     method:'POST',
                     url: '/cart/add',
@@ -20,8 +27,27 @@
             })
         },
     }
+    let addReserve = {
+        init : function () {
+            $(document).on('click', '.add-reserve', function(e) {
+
+                let itemId = $(e.currentTarget).data('item-id');
+                let memberId = ${loginmember.id};
+                console.log("itemId : "+itemId);
+                console.log("memberId : "+memberId);
+                $.ajax({
+                    method:'POST',
+                    url: '/reserve/add',
+                    data : {itemId:itemId, memberId: memberId}
+                });
+                swal("선택하신 상품이 찜리스트에 추가되었습니다");
+            })
+        },
+    }
     $(function () {
         addCart.init();
+        addReserve.init();
+        rate.init();
     })
 </script>
 <!-- Breadcrumb Section Begin -->
@@ -231,25 +257,34 @@
                     <c:forEach items="${cpage.getList()}" var="c">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/uimg/${c.img}" OnClick="location.href ='shop/${c.id}/detail'" style="cursor:pointer;" >
+
+                                <div class="product__item__pic set-bg" data-setbg="/uimg/${c.img}" style="cursor:pointer;" >
                                     <ul class="product__hover">
-                                        <li><a href="#"><img src="/img/icon/heart.png" alt=""></a></li>
+                                        <li><a href="#"><img id="add-reserve" class="add-reserve" role="button" aria-pressed="true" data-item-id="${c.id}" src="/img/icon/heart.png" alt=""><span>Reserve</span></a></li>
                                         <li><a href="#"><img src="/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
-                                        <li><a href="#"><img src="/img/icon/search.png" alt=""></a></li>
+                                        <li OnClick="location.href ='shop/${c.id}/detail'" ><a href="#"><img src="/img/icon/search.png" alt=""><span>Detail</span></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
 
+
+                                <div class="product__item__text">
                                     <h6>${c.name}</h6>
-                                    <a id="add-cart" class="add-cart btn" role="button" aria-pressed="true" style="color:red;" data-item-id="${c.id}">+ Add To Cart</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
+                                        <a id="add-cart" class="add-cart btn" role="button" aria-pressed="true" style="color:red;" data-item-id="${c.id}">+ Add To Cart</a>
+
+                                    <c:forEach items="${rlist}" var="r">
+                                        <c:if test="${r.itemId == c.id}">
+                                        <div class="rating" id="rate" class="rate">
+                                            <c:forEach begin="1" end="${r.rate}">
+                                                <i class="fa fa-star"></i>
+                                            </c:forEach>
+                                            <c:forEach begin="${r.rate + 1}" end="5">
+                                                <i class="fa fa-star-o"></i>
+                                            </c:forEach>
+                                        </div>
+                                        </c:if>
+                                    </c:forEach>
+
                                     <h5><fmt:formatNumber value="${c.price}" type="number" pattern="$#,###,###" /> </h5>
                                     <div class="product__color__select">
                                         <label for="pc-4">
@@ -270,16 +305,16 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="product__pagination">
+                        <div class="product__pagination m-lg-5" >
                             <ul class="pagination">
                                 <c:choose>
                                     <c:when test="${cpage.getPrePage() != 0}">
-                                        <li>
+                                        <li class="mx-5">
                                             <a href="/shop?pageNo=${cpage.getPrePage()}">Previous</a>
                                         </li>
                                     </c:when>
                                     <c:otherwise>
-                                        <li class="disabled">
+                                        <li class="disabled mx-5">
                                             <a href="#">Previous</a>
                                         </li>
                                     </c:otherwise>
@@ -288,12 +323,12 @@
                                 <c:forEach begin="${cpage.getNavigateFirstPage() }" end="${cpage.getNavigateLastPage() }" var="page">
                                     <c:choose>
                                         <c:when test="${cpage.getPageNum() == page}">
-                                            <li class="active">
+                                            <li class="active mx-5">
                                                 <a href="/shop?pageNo=${page}">${page }</a>
                                             </li>
                                         </c:when>
                                         <c:otherwise>
-                                            <li>
+                                            <li class="mx-5">
                                                 <a href="/shop?pageNo=${page}">${page }</a>
                                             </li>
                                         </c:otherwise>

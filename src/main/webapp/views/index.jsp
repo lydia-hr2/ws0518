@@ -50,7 +50,7 @@
         <div class="offcanvas__links">
             <a href="/login">Log in</a>
             <a href="/signin">Sign in</a>
-            <a href="#">FAQs</a>
+            <a href="/faq">FAQs</a>
             <a href="#">${loginmember.name}님</a>
         </div>
     </div>
@@ -92,7 +92,7 @@
                                     <a href="#" id="logout">로그아웃</a>
                                 </c:otherwise>
                             </c:choose>
-                            <a href="#">FAQs</a>
+                            <a href="/faq">FAQs</a>
                         </div>
                     </div>
                 </div>
@@ -103,32 +103,33 @@
         <div class="row">
             <div class="col-lg-3 col-md-3">
                 <div class="header__logo">
-                    <a href="./index.jsp"><img src="/img/logo.png" alt=""></a>
+                    <a href="/"><img src="/img/logo.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <nav class="header__menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="/shop">Shop</a></li>
-                        <li><a href="#">Pages</a>
+                        <li class="active"><a href="/">홈</a></li>
+                        <li><a href="/shop">쇼핑</a></li>
+                        <li><a href="#">메뉴</a>
                             <ul class="dropdown">
-                                <li><a href="/about">About Us</a></li>
-                                <li><a href="/shop">Shop Details</a></li>
-                                <li><a href="/cart">Shopping Cart</a></li>
-                                <li><a href="/checkout">Check Out</a></li>
-                                <li><a href="/blog">Blog Details</a></li>
+                                <li><a href="/about">회사 정보</a></li>
+                                <li><a href="/shop">쇼핑</a></li>
+                                <li><a href="/cart/${loginmember.id}">장바구니</a></li>
+                                <li><a href="/order/${loginmember.id}">주문</a></li>
+                                <li><a href="/order/confirm/${loginmember.id}">주문내역</a></li>
+                                <li><a href="/blog">블로그</a></li>
                             </ul>
                         </li>
-                        <li><a href="/reviewall">Review</a></li>
-                        <li><a href="/contact">Contacts</a></li>
+                        <li><a href="/reviewall">후기</a></li>
+                        <li><a href="/contact">문의처</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="col-lg-3 col-md-3">
                 <div class="header__nav__option">
                     <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                    <a href="#"><img src="img/icon/heart.png" alt=""></a>
+                    <a href="/reserve/${loginmember.id}"><img src="img/icon/heart.png" alt=""></a>
                     <a href="/cart/${loginmember.id}"><img src="img/icon/cart.png" alt="">
                     </a>
                 </div>

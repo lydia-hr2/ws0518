@@ -67,11 +67,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
-                        <h4>Shopping Cart</h4>
+                        <h4>Reserve List</h4>
                         <div class="breadcrumb__links">
                             <a href="/">Home</a>
                             <a href="/shop">Shop</a>
-                            <span>Shopping Cart</span>
+                            <span>Reserve List</span>
                         </div>
                     </div>
                 </div>
@@ -92,73 +92,50 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Product</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
+                                    <th>Img</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                    <c:forEach var="cart" items="${myCart}">
-                                    <tr id="cart${cart.id}">
+                                    <c:forEach var="obj" items="${myReserve}">
+                                    <tr id="cart${obj.id}">
                                         <td class="product__cart__item">
                                             <div class="product__cart__item__pic">
-                                                <img src="/uimg/${cart.img}" alt="" style="width: 90px; height: 90px">
-                                            </div>
-                                            <div class="product__cart__item__text">
-                                                <h6>${cart.name}</h6>
-                                                <h5><fmt:formatNumber value="${cart.price}" pattern="#,###,###원" /></h5>
+                                                <img src="/uimg/${obj.img}" alt="" style="width: 90px; height: 90px">
                                             </div>
                                         </td>
-                                        <td class="quantity__item">
-                                            <div class="quantity">
-                                                <div class="pro-qty-2">
-                                                    <input type="text" value="${cart.cnt}" id="inputCnt" />
+                                        <td class="product__cart__item">
+                                            <div class="product__cart__item__text">
+                                                <h6>${obj.name}</h6>
+                                            </div>
+                                        </td>
+                                        <td class="product__cart__item">
+                                            <div class="product__cart__item__text">
+                                                <h5><fmt:formatNumber value="${obj.price}" pattern="#,###,###원" /></h5>
+                                            </div>
+                                        </td>
+                                        <td class="product__cart__item">
+                                            <div class="col-lg-10 col-md-10 col-sm-10">
+                                                <div class="continue__btn update__btn">
+                                                    <a href="#" style="width:100px;"><i class="fa fa-spinner"></i> Add to Cart</a>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="cart__price"><fmt:formatNumber value="${cart.price * cart.cnt}" pattern="#,###,###원" /></td>
-                                        <td class="cart__close"><a data-item-id="${cart.id}" role="button" id="delete_btn" class="btn"><i class="fa fa-close"></i></a></td>
-                                    <tr>
-                                    <c:set var="total" value="${total + (cart.price * cart.cnt)}"/>
-                                    <c:set var="qnt" value="${qnt + cart.cnt}"/>
-                                    <input type="hidden" id="totalValue" value="${total + (cart.price * cart.cnt)}">
-                                    <input type="hidden" id="qntValue" value="${qnt + cart.cnt}">
+                                     <tr>
                                     </c:forEach>
                             </tbody>
                         </table>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="continue__btn">
-                                <a href="/shop">Continue Shopping</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="continue__btn update__btn">
-                                <a href="#"><i class="fa fa-spinner"></i> Update cart</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="cart__discount">
-                        <h6>Discount codes</h6>
-                        <form action="#">
-                            <input type="text" placeholder="Coupon code">
-                            <button type="submit">Apply</button>
-                        </form>
-                    </div>
-                    <div class="cart__total">
-                        <h6>Cart total</h6>
-                        <ul>
-                            <li>전체 상품 개수 <span id="totalCnt">${qnt}</span></li>
-                            <li>Subtotal <span id="totalSub"><fmt:formatNumber value="${total}" pattern="#,###,###원"/></span></li>
-                            <li>Total <span id="totalSum"><fmt:formatNumber value="${total}" pattern="#,###,###원"/></span></li>
-                        </ul>
-                        <a href="/order/${loginmember.id}" class="primary-btn" role="button">Proceed to checkout</a>
-                    </div>
-                </div>
+<%--                <div class="col-lg-4">--%>
+<%--                        <div class="col-lg-10 col-md-10 col-sm-10">--%>
+<%--                            <div class="continue__btn update__btn">--%>
+<%--                                <a href="#"><i class="fa fa-spinner"></i> ALL to Cart</a>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                </div>--%>
             </div>
         </div>
     </section>

@@ -1,6 +1,7 @@
 package com.kbstar.controller;
 
 import com.kbstar.dto.Review;
+import com.kbstar.dto.ReviewRate;
 import com.kbstar.service.ReviewService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,16 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/404")
+    public String errorPage(Model model) {
+        model.addAttribute("center", "404");
+        return "index";
+    }
+
+
     @RequestMapping("/shop")
-    public String shop(Model model) {
+    public String shop(Model model, Integer k) {
+
         model.addAttribute("center","shop");
         return "index";
     }
@@ -58,6 +67,48 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/reserve")
+    public String reserve(Model model) {
+        model.addAttribute("center","shopping-reserve");
+        return "index";
+    }
+
+    @RequestMapping("/about")
+    public String about(Model model) {
+        model.addAttribute("center","about");
+        return "index";
+    }
+
+    @RequestMapping("/blog-details")
+    public String blogdetails(Model model) {
+        model.addAttribute("center","blog-details");
+        return "index";
+    }
+    
+    @RequestMapping("/blog")
+    public String blog(Model model) {
+        model.addAttribute("center","blog");
+        return "index";
+    }
+
+    @RequestMapping("/shop-details")
+    public String shopdetails(Model model) {
+        model.addAttribute("center","shop-details");
+        return "index";
+    }
+
+    @RequestMapping("/shopping-cart")
+    public String shoppingcart(Model model) {
+        model.addAttribute("center","shopping-cart");
+        return "index";
+    }
+
+    @RequestMapping("/faq")
+    public String faq(Model model) {
+        model.addAttribute("center","faq");
+        return "index";
+    }
+
     @RequestMapping("/review")
     public String review(Model model) {
         model.addAttribute("center","review");
@@ -78,4 +129,9 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/chatbot")
+    public String chatbot(Model model) {
+        model.addAttribute("center", "chatbot");
+        return "index";
+    }
 }

@@ -6,6 +6,20 @@
 
 <mapper namespace="com.kbstar.mapper.ReviewMapper">
 
+    <select id="rateAll" resultType="ReviewRate">
+        SELECT I.register_id AS itemId , AVG(r.rate) AS rate
+        FROM item I LEFT JOIN review r
+                              ON I.register_id = r.item_id
+        GROUP BY I.register_id
+    </select>
+
+    <select id="rate" resultType="ReviewRate">
+        SELECT I.register_id AS itemId , AVG(r.rate) AS rate
+        FROM item I LEFT JOIN review r
+        ON I.register_id = r.item_id
+        GROUP BY I.register_id
+        HAVING I.register_id = #{itemID}
+    </select>
 
     <select id="search" parameterType="reviewSearch" resultType="review">
         SELECT * FROM review

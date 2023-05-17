@@ -26,7 +26,7 @@
         <div class="container">
             <div class="checkout__form">
                 <form action="/order/orderImpl" method="post">
-                    <input type="hidden" value="${loginmember.id}" name="userId">
+                    <input type="hidden" value="${loginmember.id}" name="memberId">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <h6 class="coupon__code"><span class="icon_tag_alt"></span> Have a coupon? <a href="#">Click
@@ -42,7 +42,7 @@
                             </div>
                             <div class="checkout__input">
                                 <p>Address<span>*</span></p>
-                                <input type="text" placeholder="Street Address" class="checkout__input__add" id="addr">
+                                <input type="text" placeholder="Street Address" class="checkout__input__add" name="addr">
                             </div>
                             <div class="checkout__input">
                                 <p>Postcode / ZIP<span>*</span></p>
@@ -60,9 +60,10 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="checkout__order">
                                 <h4 class="order__title">Your order</h4>
-                                <div class="checkout__order__products">Product <span>Total</span></div>
+                                <div class="checkout__order__products">상품 <span>가격</span></div>
                                 <c:set var="total" value="0"/>
                                 <c:set var="qnt" value="0"/>
+                                <input type="hidden" name="itemName" value="상품"/>
                                 <ul class="checkout__total__products">
                                     <c:forEach var="item" items="${items}">
                                         <c:set var="total" value="${total + (item.price * item.cnt)}"/>

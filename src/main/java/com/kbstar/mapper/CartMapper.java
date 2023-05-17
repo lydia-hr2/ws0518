@@ -18,9 +18,8 @@ public interface CartMapper {
 
     void increaseCnt(int memberId, int itemId);
 
-    void deleteItem(int id);
+    void deleteItem(int memberId, int itemId);
 
     void deleteCart(int memberId);
-
-
+    Cart getCart(int memberId, int itemId);
 }

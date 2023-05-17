@@ -35,8 +35,13 @@
         WHERE member_id = #{memberId}
         AND item_id = #{itemId}
     </update>
+    <select id="getCart" parameterType="integer">
+        SELECT * FROM Cart
+        WHERE member_id = #{memberId}
+        AND item_id = #{itemId}
+    </select>
     <delete id="deleteItem" parameterType="integer">
-        DELETE FROM CART WHERE id = #{id}
+        DELETE FROM CART WHERE member_id = #{memberId} and item_id = #{itemId}
     </delete>
     <delete id="deleteCart" parameterType="integer">
         DELETE FROM CART WHERE member_id = #{memberId}

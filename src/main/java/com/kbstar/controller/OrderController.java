@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
@@ -33,13 +34,19 @@ public class OrderController {
         return "index";
     }
 
-    @RequestMapping("/orderImpl")
-    public String orderPage(Order order, HttpSession session) {
-        Member user = (Member) session.getAttribute("loginUser");
-        order.setUserId(user.getId());
+    @PostMapping("/orderImpl")
+    public String orderImpl(Order order, HttpSession session) {
+        Member user = (Member) session.getAttribute("loginmember");
+        order.setMemberId(user.getId());
         orderService.insert(order);
         cartService.deleteCart(user.getId());
-        return "redirect:/cart/" + user.getId();
+        return "redirect:/order/confirm" + user.getMemberId();
     }
-
+    @GetMapping("/confirm/{memberId}")
+    public String confirmOrder(Model model, @PathVariable int memberId) {
+        List<Order> orders = orderService.getOrder(memberId);
+        model.addAttribute("orders", orders);
+        model.addAttribute("center", "orderDetail");
+        return "index";
+    }
 }

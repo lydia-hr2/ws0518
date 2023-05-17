@@ -16,7 +16,16 @@ public class CustomExceptionHandler {
     public String handleUserException(UserException e, Model model) {
         log.info("=================== error =====================", e);
         model.addAttribute("error", e.getMessage());
-        return "exception";
+        model.addAttribute("center", "404");
+        return "index";
+    }
+
+    @ExceptionHandler({Exception.class})
+    public String Exception(UserException e, Model model) {
+        log.info("=================== error =====================", e);
+        model.addAttribute("error", e.getMessage());
+        model.addAttribute("center", "404");
+        return "index";
     }
 
     @ExceptionHandler({ContentException.class})
