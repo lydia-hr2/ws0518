@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service //service annotation을 안하면 @Autowired가 안 먹음
 public class ChartService {
 
     @Autowired

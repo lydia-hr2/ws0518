@@ -90,7 +90,7 @@
 </script>
 <!-- Begin Page Content -->
 <div class="col-sm-8 text-left">
-                <h1 >Chat Bot</h1>
+                <h1 >챗봇에게 궁금한 것을 물어보세요!</h1>
                 <h1 id="adm_id">${logincust.id}</h1>
                 <H1 id="status">Status</H1>
                 <button id="connect">Connect</button>

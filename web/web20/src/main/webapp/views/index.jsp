@@ -3,8 +3,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
-<html>
-<html lang="ko">
 <head>
     <title>유성진의 싸이트</title>
     <meta charset="utf-8">
@@ -227,4 +225,3 @@
 </footer>
 
 </body>
-</html>
